@@ -1,0 +1,33 @@
+{
+  "name": "EvolutionaryParadigm",
+  "version": "1.0.0",
+  "description": "进化范式网站",
+  "author": "digital_era@sina.com",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite preview",
+    "tunnel": "lt --port 5173 --subdomain EvolutionaryParadigm"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^3.2.5",
+    "vite": "^4.5.13"
+  },
+  "dependencies": {
+    "gsap": "^3.12.2",
+    "localtunnel": "^2.0.2",
+    "three": "^0.158.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
