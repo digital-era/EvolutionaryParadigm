@@ -1,0 +1,314 @@
+/* 重置默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 全局样式 */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* 备用字体 */
+    color: #fff;
+    background: #0d1b2a;
+    overflow-x: hidden;
+}
+
+/* 粒子背景 */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 确保背景在最底层 */
+}
+
+/* 导航栏 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Orbitron', 'Helvetica Neue', sans-serif; /* 增加备用字体 */
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #00d4ff, #cc00ff); /* 渐变色 */
+    -webkit-background-clip: text; /* 文字填充渐变 */
+    background-clip: text;
+    color: transparent; /* 透明文字，显示渐变 */
+    text-shadow: 
+        0 0 5px rgba(0, 212, 255, 0.8), 
+        0 0 10px rgba(0, 212, 255, 0.6), 
+        0 0 15px rgba(204, 0, 255, 0.4); /* 多层发光阴影 */
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.2); /* 细微描边 */
+    animation: pulse 2s infinite ease-in-out; /* 脉冲动画 */
+}
+
+/* 脉冲动画 */
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 
+            0 0 5px rgba(0, 212, 255, 0.8), 
+            0 0 10px rgba(0, 212, 255, 0.6), 
+            0 0 15px rgba(204, 0, 255, 0.4);
+    }
+    50% {
+        text-shadow: 
+            0 0 8px rgba(0, 212, 255, 1), 
+            0 0 15px rgba(0, 212, 255, 0.8), 
+            0 0 20px rgba(204, 0, 255, 0.6);
+    }
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #00d4ff;
+}
+
+/* 首页英雄区 */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', 'Helvetica Neue', sans-serif;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background: #00d4ff;
+    color: #0d1b2a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #00aaff;
+}
+
+/* 版块概览（横向布局） */
+.sections {
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    gap: 90px; /* 卡片间距 */
+    flex-wrap: wrap; /* 允许换行 */
+}
+
+.section-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px; /* 固定宽度，横向排列 */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.section-card:hover {
+    transform: translateで見ずY(-10px);
+}
+
+.section-card h2 {
+    font-family: 'Orbitron', 'Helvetica Neue', sans-serif;
+    margin-bottom: 15px;
+}
+
+.section-card p {
+    margin-bottom: 20px;
+}
+
+.card-button {
+    padding: 10px 20px;
+    background: #00d4ff;
+    color: #0d1b2a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.card-button:hover {
+    background: #00aaff;
+}
+
+/* 内容页面 */
+.content {
+    padding: 150px 50px 100px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content h1 {
+    font-family: 'Orbitron', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.content-details {
+    margin-top: 40px;
+}
+
+.content-details h3 {
+    font-family: 'Orbitron', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #00d4ff, #cc00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0, 212, 255, 0.8);
+}
+
+.content-details ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 固定2列，每行2个 */
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.content-details .detail-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Orbitron', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    opacity: 0; /* 初始透明，配合动画 */
+}
+
+.content-details .detail-card a {
+    color: #fff;
+    text-decoration: none; /* 移除下划线 */
+    display: block; /* 确保链接填满卡片 */
+    width: 100%;
+    height: 100%;
+    transition: color 0.3s;
+}
+
+.content-details .detail-card a:hover {
+    color: #00d4ff; /* 悬停时文字变霓虹蓝 */
+}
+
+/* 逐个淡入动画 */
+.content-details .detail-card:nth-child(1) { animation-delay: 0.1s; }
+.content-details .detail-card:nth-child(2) { animation-delay: 0.2s; }
+.content-details .detail-card:nth-child(3) { animation-delay: 0.3s; }
+.content-details .detail-card:nth-child(4) { animation-delay: 0.4s; }
+
+.content-details .detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .logo {
+        font-size: 20px; /* 移动端稍减小 */
+        margin-bottom: 10px;
+    }
+    .nav-links {
+        margin-top: 10px;
+        justify-content: center; /* 导航链接居中 */
+    }
+    .nav-links li {
+        margin: 0 15px;
+    }
+    .hero h1 {
+        font-size: 40px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    .sections {
+        padding: 50px 20px;
+        gap: 30px; /* 移动端减小间距 */
+    }
+    .section-card {
+        width: 100%; /* 移动端占满宽度 */
+        max-width: 400px; /* 限制最大宽度 */
+    }
+    .content {
+        padding: 100px 20px 50px;
+    }
+    .content-details h3 {
+        font-size: 20px;
+    }
+    .content-details ul {
+        grid-template-columns: 1fr; /* 移动端单列 */
+    }
+    .content-details .detail-card {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
