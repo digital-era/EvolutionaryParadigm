@@ -202,7 +202,7 @@ body {
 }
 
 .content-details h3 a {
-    color: transparent; /* 继承渐变色 */
+    color: #00d4ff; /* 链接字体为霓虹蓝 */
     text-decoration: none; /* 移除下划线 */
     transition: text-shadow 0.3s; /* 悬停时增强发光 */
 }
