@@ -201,6 +201,16 @@ body {
     text-shadow: 0 0 5px rgba(0, 212, 255, 0.8);
 }
 
+.content-details h3 a {
+    color: transparent; /* 继承渐变色 */
+    text-decoration: none; /* 移除下划线 */
+    transition: text-shadow 0.3s; /* 悬停时增强发光 */
+}
+
+.content-details h3 a:hover {
+    text-shadow: 0 0 8px rgba(0, 212, 255, 1), 0 0 15px rgba(0, 212, 255, 0.8); /* 悬停发光 */
+}
+
 .content-details ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 固定2列，每行2个 */
