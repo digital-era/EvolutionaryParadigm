@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI学习案例列表</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 粒子背景容器 -->
+    <div id="particles-js"></div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">AI范式进化</div>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="ai-learning.html" class="active">AI学习范式</a></li>
+            <li><a href="ai-investment.html">AI投资范式</a></li>
+            <li><a href="ai-biomed.html">AI生医范式</a></li>
+        </ul>
+    </nav>
+
+    <!-- 内容区域 -->
+    <section class="content">
+        <h1>AI学习范式案例列表</h1>
+        <p>以下是 AI 学习范式的具体案例，涵盖跟踪前沿、深入调研、追寻答案和内容创意四个阶段。点击“查看案例”关注我们的微信公众号后，即可访问详细内容。</p>
+        
+        <div class="content-details">
+            <h3>案例列表</h3>
+            <ul class="iteration-stages">
+                <!-- 跟踪前沿 -->
+                <li class="detail-card">
+                    <h4>前沿信息案例 1：面向未来的AGI视角</h4>
+                    <p>坚信AI会重塑人类未来，要构建AI 能力边界之上”的价值结构。</p>
+                    <button class="case-button" data-link="ai-learn-case-frontier-1.html">查看案例</button>
+                </li>
+                <li class="detail-card">
+                    <h4>前沿信息案例 2：AI 时代的真实价值</h4>
+                    <p>好的模型能震撼人，好的产品才留得住人。</p>
+                    <button class="case-button" data-link="ai-learn-case-frontier-2.html">查看案例</button>
+                </li>
+                <!-- 深入调研 -->
+                <li class="detail-card">
+                    <h4>深入调研案例 1：深入调研前沿 AI 工具</h4>
+                    <p>前沿工具使用和对比 (Grok DeepResearch, Perplexity DeepResearch, Gemini DeepResearch，OpenAI DeepResearch) </p>
+                    <button class="case-button" data-link="ai-learn-case-research-1.html">查看案例</button>
+                </li>
+                <li class="detail-card">
+                    <h4>深入调研案例 2：美国与中国原生 AI 教育领域市场、商业模式和最佳实践洞察</h4>
+                    <p>美国和中国正在成为原生人工智能教育领域中两个具有重要意义的市场。</p>
+                    <button class="case-button" data-link="ai-learn-case-research-2.html">查看案例</button>
+                </li>
+                <!-- 追寻答案 -->
+                <li class="detail-card">
+                    <h4>追寻答案案例 1：AI 模型预训练的本质</h4>
+                    <p>通过第一性原理理解 AI 模型预训练的核心过程和本质特征。</p>
+                    <button class="case-button" data-link="ai-learn-case-answers-1.html">查看案例</button>
+                </li>
+                <li class="detail-card">
+                    <h4>追寻答案案例 2：AI 演进方向</h4>
+                    <p>探索能够自我进化、超越人类的 AI 。</p>
+                    <button class="case-button" data-link="ai-learn-case-answers-2.html">查看案例</button>
+                </li>
+                <!-- 内容创意 -->
+                <li class="detail-card">
+                    <h4>内容创意案例 1：AI 生成播客《未来编程》</h4>
+                    <p>使用 AI 工具生成科技主题播客，展示多模态内容创作的创新潜力。</p>
+                    <button class="case-button" data-link="ai-learn-case-creative-1.html">查看案例</button>
+                </li>
+                <li class="detail-card">
+                    <h4>内容创意案例 2：AI 创作古典诗词《天工赋·AGI行》</h4>
+                    <p>通过 AI 创作李白风格作品，科技与浪漫主义诗人的跨界合作。</p>
+                    <button class="case-button" data-link="ai-learn-case-creative-2.html">查看案例</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 微信公众号模态框 -->
+    <div class="modal" id="wechat-modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h4>关注微信公众号</h4>
+            <p>请扫描下方二维码关注“digitconnect”公众号（WeChat ID: digitconnect），关注后即可访问案例详情。</p>
+            <img src="images/wechat-qrcode-placeholder.png" alt="微信公众号二维码" class="qrcode">
+            <p>关注后，点击下方链接继续访问案例。</p>
+            <a href="#" id="modal-case-link" class="modal-button">访问案例</a>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2025 AI范式进化. 保留所有权利。</p>
+    </footer>
+
+    <!-- 引入粒子背景和脚本 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
