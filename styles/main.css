@@ -142,7 +142,7 @@ body {
 }
 
 .section-card:hover {
-    transform: translateで見ずY(-10px);
+    transform: translateY(-10px);
 }
 
 .section-card h2 {
@@ -172,7 +172,7 @@ body {
     padding: 150px 50px 100px;
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left; /* 左对齐 */
 }
 
 .content h1 {
@@ -188,16 +188,14 @@ body {
 
 .content-details {
     margin-top: 40px;
+    text-align: left; /* 左对齐 */
 }
 
 .content-details h3 {
     font-family: 'Orbitron', 'Helvetica Neue', sans-serif;
     font-size: 24px;
     margin-bottom: 20px;
-    background: linear-gradient(45deg, #00d4ff, #cc00ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #00d4ff; /* 非链接标题使用霓虹蓝 */
     text-shadow: 0 0 5px rgba(0, 212, 255, 0.8);
 }
 
@@ -211,7 +209,57 @@ body {
     text-shadow: 0 0 8px rgba(0, 212, 255, 1), 0 0 15px rgba(0, 212, 255, 0.8); /* 悬停发光 */
 }
 
-.content-details ul {
+/* 迭代路径页面阶段列表 */
+.iteration-stages {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.iteration-stages .detail-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Roboto', Arial, sans-serif;
+    text-align: left; /* 左对齐 */
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    opacity: 0; /* 初始透明，配合动画 */
+}
+
+.iteration-stages .detail-card h4 {
+    font-family: 'Orbitron', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+.iteration-stages .detail-card p {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* 逐个淡入动画 */
+.iteration-stages .detail-card:nth-child(1) { animation-delay: 0.1s; }
+.iteration-stages .detail-card:nth-child(2) { animation-delay: 0.2s; }
+.iteration-stages .detail-card:nth-child(3) { animation-delay: 0.3s; }
+.iteration-stages .detail-card:nth-child(4) { animation-delay: 0.4s; }
+.iteration-stages .detail-card:nth-child(5) { animation-delay: 0.5s; }
+.iteration-stages .detail-card:nth-child(6) { animation-delay: 0.6s; }
+.iteration-stages .detail-card:nth-child(7) { animation-delay: 0.7s; }
+.iteration-stages .detail-card:nth-child(8) { animation-delay: 0.8s; }
+
+.iteration-stages .detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+}
+
+/* 内容页面卡片（AI学习页面） */
+.content-details ul:not(.iteration-stages) {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 固定2列，每行2个 */
     gap: 20px;
@@ -226,7 +274,7 @@ body {
     font-family: 'Orbitron', 'Helvetica Neue', sans-serif;
     font-size: 18px;
     font-weight: 500;
-    text-align: center;
+    text-align: center; /* AI学习页面卡片居中 */
     border: 1px solid rgba(0, 212, 255, 0.2);
     box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -272,9 +320,114 @@ body {
 
 /* 页脚 */
 footer {
-    text-align: center;
-    padding: 20px;
+    text-align: left; /* 左对齐 */
+    padding: 20px 50px;
     background: rgba(0, 0, 0, 0.5);
+}
+
+/* 案例按钮（ai-learning-caselist.html） */
+.case-button {
+    padding: 10px 20px;
+    background: #00d4ff; /* 霓虹蓝背景 */
+    color: #fff; /* 白色文字 */
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, text-shadow 0.3s;
+    margin-top: 10px;
+    text-shadow: 0 0 5px rgba(0, 212, 255, 0.8); /* 霓虹发光 */
+}
+
+.case-button:hover {
+    background: #00aaff; /* 稍暗的霓虹蓝 */
+    text-shadow: 0 0 8px rgba(0, 212, 255, 1); /* 增强发光 */
+}
+
+/* 微信公众号模态框 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000; /* 提高 z-index，确保在最上层 */
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* 确保可见 */
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.2); /* 增加背景不透明度 */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    border: 1px solid rgba(0, 212, 255, 0.3); /* 增强边框 */
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4); /* 增强阴影 */
+    opacity: 1; /* 确保内容可见 */
+}
+
+.modal-content h4 {
+    font-family: 'Orbitron', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: #00d4ff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(0, 212, 255, 0.8); /* 增强标题可见性 */
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5); /* 轻微发光 */
+}
+
+.qrcode {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    display: block;
+    background: #fff; /* 添加白色背景，防止图片透明 */
+    padding: 5px; /* 内边距 */
+}
+
+.modal-button {
+    padding: 10px 20px;
+    background: #00d4ff; /* 霓虹蓝背景 */
+    color: #fff; /* 白色文字 */
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, text-shadow 0.3s;
+    text-shadow: 0 0 5px rgba(0, 212, 255, 0.8); /* 霓虹发光 */
+}
+
+.modal-button:hover {
+    background: #00aaff; /* 稍暗的霓虹蓝 */
+    text-shadow: 0 0 8px rgba(0, 212, 255, 1); /* 增强发光 */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-shadow: 0 0 5px rgba(0, 212, 255, 0.8); /* 增强可见性 */
+}
+
+.close-button:hover {
+    color: #00d4ff;
 }
 
 /* 响应式设计 */
@@ -294,6 +447,10 @@ footer {
     .nav-links li {
         margin: 0 15px;
     }
+    .hero {
+        height: auto;
+        padding: 100px 20px;
+    }
     .hero h1 {
         font-size: 40px;
     }
@@ -311,14 +468,42 @@ footer {
     .content {
         padding: 100px 20px 50px;
     }
+    .content h1 {
+        font-size: 32px;
+    }
     .content-details h3 {
         font-size: 20px;
     }
-    .content-details ul {
+    .content-details ul:not(.iteration-stages) {
         grid-template-columns: 1fr; /* 移动端单列 */
     }
     .content-details .detail-card {
         font-size: 16px;
         padding: 15px;
+    }
+    .iteration-stages .detail-card h4 {
+        font-size: 18px;
+    }
+    .iteration-stages .detail-card p {
+        font-size: 14px;
+    }
+    .case-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+    }
+    .qrcode {
+        width: 120px;
+        height: 120px;
+    }
+    .modal-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    footer {
+        padding: 20px;
     }
 }
