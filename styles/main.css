@@ -79,6 +79,7 @@ body {
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s;
+    white-space: nowrap; /* 防止文本换行 */
 }
 
 .nav-links a:hover,
@@ -440,16 +441,23 @@ footer {
         font-size: 20px; /* 移动端稍减小 */
         margin-bottom: 10px;
     }
+    
     .nav-links {
         margin-top: 10px;
         justify-content: center; /* 导航链接居中 */
     }
     .nav-links li {
-        margin: 0 15px;
+        margin: 0 10px;
     }
+
+    .nav-links a {
+        font-size: 14px; /* 减小字体 */
+        white-space: nowrap;
+    }
+    
     .hero {
         height: auto;
-        padding: 100px 20px;
+        padding: 20px 20px;
     }
     .hero h1 {
         font-size: 40px;
