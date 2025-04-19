@@ -83,16 +83,26 @@ document.addEventListener('DOMContentLoaded', () => {
 (function adjustContentPadding() {
     function setContentPadding() {
         const navbar = document.querySelector('.navbar');
+        const hero = document.querySelector('.hero');
+        const sections = document.querySelector('.sections');
         const content = document.querySelector('.content');
-        if (navbar && content) {
+        if (navbar) {
             const navbarHeight = navbar.offsetHeight;
-            content.style.paddingTop = `${navbarHeight + 20}px`;
+            if (hero) {
+                hero.style.paddingTop = `${navbarHeight + 20}px`;
+            }
+            if (sections) {
+                sections.style.paddingTop = `${navbarHeight + 20}px`;
+            }
+            if (content) {
+                content.style.paddingTop = `${navbarHeight + 20}px`;
+            }
         }
     }
 
     // 初始设置
     setContentPadding();
-
+    
     // 监听窗口调整
     window.addEventListener('resize', setContentPadding);
 })();
