@@ -79,3 +79,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+(function adjustContentPadding() {
+    function setContentPadding() {
+        const navbar = document.querySelector('.navbar');
+        const content = document.querySelector('.content');
+        if (navbar && content) {
+            const navbarHeight = navbar.offsetHeight;
+            content.style.paddingTop = `${navbarHeight + 20}px`;
+        }
+    }
+
+    // 初始设置
+    setContentPadding();
+
+    // 监听窗口调整
+    window.addEventListener('resize', setContentPadding);
+})();
