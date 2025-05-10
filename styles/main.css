@@ -144,14 +144,24 @@ body {
     margin-bottom: 30px;
 }
 
+.button-group {
+    display: flex;
+    gap: 20px; /* 按钮间距 */
+    justify-content: center;
+    align-items: center;
+}
+
 .cta-button {
     padding: 15px 30px;
     background: #00d4ff;
     color: #0d1b2a;
     text-decoration: none;
     border-radius: 5px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
     font-weight: bold;
     transition: background 0.3s;
+    text-align: center;
 }
 
 .cta-button:hover {
@@ -501,6 +511,14 @@ footer {
     }
     .hero p {
         font-size: 16px;
+    }
+    .button-group {
+        flex-direction: column;
+        gap: 15px; /* 移动端垂直间距 */
+    }
+    .cta-button {
+        padding: 12px 24px; /* 移动端减小内边距 */
+        font-size: 14px;
     }
     .sections {
         padding: 50px 20px;
