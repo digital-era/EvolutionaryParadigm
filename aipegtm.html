@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Paradigm Evolution (AIPE)</title>
+  <title>AI Paradigm Evolution GTM</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
   <style>
     body {
       margin: 0;
-      overflow: auto;
+      overflow: hidden; /* Prevent scrollbar */
       background: #000;
       color: #fff;
       font-family: 'Arial', sans-serif;
@@ -22,37 +22,42 @@
     .container {
       position: relative;
       z-index: 1;
-      padding: 20px;
+      padding: 10px; /* Reduced padding */
       text-align: center;
+      min-height: 100vh; /* Ensure container fills viewport */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center content vertically */
     }
     .header {
       background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
+      padding: 10px; /* Reduced padding */
       border-radius: 10px;
-      margin: 10px 0;
+      margin: 5px 0; /* Reduced margin */
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     .footer {
       background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
+      padding: 10px; /* Reduced padding */
       border-radius: 10px;
-      margin: 10px 0;
+      margin: 5px 0; /* Reduced margin */
       text-align: center;
     }
     .card-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 15px; /* Slightly reduced gap */
+      margin: 5px 0; /* Reduced margin */
     }
     .card {
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid #0088ff;
       border-radius: 10px;
-      padding: 20px;
-      width: calc(50% - 40px);
+      padding: 15px; /* Reduced padding */
+      width: calc(50% - 30px); /* Adjusted for smaller gap */
       box-shadow: 0 0 20px rgba(0, 136, 255, 0.5);
       transition: transform 0.3s;
       text-align: left;
@@ -62,8 +67,8 @@
       transform: scale(1.05);
     }
     .logo, .robot {
-      width: 100px;
-      height: 100px;
+      width: 80px; /* Slightly smaller images */
+      height: 80px;
       border-radius: 50%;
       display: inline-block;
       vertical-align: middle;
@@ -75,24 +80,25 @@
       margin-right: 10px;
     }
     h1 {
-      font-size: 2.5em;
+      font-size: 2em; /* Reduced font size */
       text-shadow: 0 0 10px #0088ff;
-      margin: 10px 0;
+      margin: 5px 0; /* Reduced margin */
     }
     h2 {
-      font-size: 1.5em;
+      font-size: 1.2em; /* Reduced font size */
       text-shadow: 0 0 10px #0088ff;
-      margin: 10px 0;
+      margin: 5px 0; /* Reduced margin */
       text-align: center;
     }
     p {
       text-shadow: 0 0 10px #0088ff;
-      margin: 10px 0;
+      margin: 5px 0; /* Reduced margin */
+      font-size: 0.9em; /* Slightly smaller font */
     }
     .footer p {
-      font-size: 1.5em;
+      font-size: 1.2em; /* Reduced font size */
       text-shadow: 0 0 10px #0088ff;
-      margin: 10px 0;
+      margin: 5px 0; /* Reduced margin */
     }
     a {
       color: #0088ff;
@@ -102,20 +108,20 @@
       text-decoration: underline;
     }
     .qrcode {
-      width: 100px;
-      height: 100px;
+      width: 80px; /* Slightly smaller QR code */
+      height: 80px;
       float: right;
-      margin-left: 20px;
-      margin-bottom: 10px;
+      margin-left: 15px;
+      margin-bottom: 5px;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
-      <img src="logo.png" alt="AIPE Logo" class="logo">
+      <img src="images/logo.png" alt="AIPE Logo" class="logo">
       <h1>AI范式进化，引领未来</h1>
-      <img src="robot.png" alt="Robot Elf" class="robot">
+      <img src="images/robot.png" alt="Robot Elf" class="robot">
     </div>
     <div class="card-container">
       <div class="card">
@@ -136,7 +142,7 @@
       </div>
       <div class="card">
         <h2>网站和公众号</h2>
-        <img src="wechat-qrcode-placeholder.png" alt="WeChat QR Code" class="qrcode">
+        <img src="images/wechatqrcode.png" alt="WeChat QR Code" class="qrcode">
         <p><a href="https://digital-era.github.io/EvolutionaryParadigm" target="_blank">https://digital-era.github.io/EvolutionaryParadigm</a></p>
         <p>公众号：digitconnect</p>
       </div>
@@ -200,5 +206,6 @@
       }
     }
   </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93d7655aecb1bfd8',t:'MTc0Njg1ODcxMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
