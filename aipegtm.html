@@ -114,25 +114,32 @@
       margin-bottom: 5px;
     }
 
-    /* Styles for the audio player controls (方案 1: 左下角固定) */
+    /* Styles for the audio player controls (高度减小) */
     .audio-controls {
-      position: fixed; /* Fixed position relative to the viewport */
-      bottom: 20px;    /* 20px from the bottom */
-      left: 20px;      /* 20px from the left */
+      position: fixed; 
+      bottom: 15px;    /* 稍微调整一下位置，因为变小了 */
+      left: 15px;      
       background: rgba(0,0,0,0.8);
-      padding: 10px 15px;
-      border-radius: 25px; 
-      box-shadow: 0 0 15px #0088ff;
+      padding: 4px 12px; /* 上下内边距减小，左右也略微调整 */
+      border-radius: 15px; /* 圆角减小 */
+      box-shadow: 0 0 10px rgba(0, 136, 255, 0.5); /* 阴影也略微减小 */
       z-index: 100;
+      display: flex; /* 确保按钮在容器内垂直居中 (如果容器padding不为0) */
+      align-items: center;
     }
     .audio-controls button {
       background-color: #0088ff;
       color: white;
       border: none;
-      padding: 8px 15px;
-      border-radius: 5px;
+      outline: none;
+      padding: 3px 10px; /* 上下内边距减小，左右也略微调整 */
+      border-radius: 3px; /* 圆角减小 */
       cursor: pointer;
-      font-size: 0.9em;
+      font-size: 0.7em;   /* 字体大小减小 */
+      line-height: 1.2; /* 调整行高以帮助垂直居中文本 */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
     }
     .audio-controls button:hover {
       background-color: #0055cc;
@@ -142,7 +149,10 @@
 <body>
 
   <audio id="backgroundAudio" autoplay loop>
-    <source src="audio/concatenated_voice_with_music.mp3" type="audio/wav">
+    <!-- 确保你的音频文件路径正确 -->
+    <source src="audio/concatenated_voice_with_music.mp3" type="audio/mpeg">
+    <!-- 如果上面的 MP3 路径不正确，或者你想保留 WAV 作为备用，可以这样: -->
+    <!-- <source src="concatenated_voice_with_music.wav" type="audio/wav"> -->
     Your browser does not support the audio element.
   </audio>
 
