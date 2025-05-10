@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Paradigm Evolution (AIPE)</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: auto;
+      background: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+    }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      text-align: center;
+    }
+    .header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px 0;
+      text-align: center;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #0088ff;
+      border-radius: 10px;
+      padding: 20px;
+      width: calc(50% - 40px);
+      box-shadow: 0 0 20px rgba(0, 136, 255, 0.5);
+      transition: transform 0.3s;
+      text-align: left;
+      box-sizing: border-box;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .logo, .robot {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .logo {
+      margin-left: 10px;
+    }
+    .robot {
+      margin-right: 10px;
+    }
+    h1 {
+      font-size: 2.5em;
+      text-shadow: 0 0 10px #0088ff;
+      margin: 10px 0;
+    }
+    h2 {
+      font-size: 1.5em;
+      text-shadow: 0 0 10px #0088ff;
+      margin: 10px 0;
+      text-align: center;
+    }
+    p {
+      text-shadow: 0 0 10px #0088ff;
+      margin: 10px 0;
+    }
+    .footer p {
+      font-size: 1.5em;
+      text-shadow: 0 0 10px #0088ff;
+      margin: 10px 0;
+    }
+    a {
+      color: #0088ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .qrcode {
+      width: 100px;
+      height: 100px;
+      float: right;
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="logo.png" alt="AIPE Logo" class="logo">
+      <h1>AI范式进化，引领未来</h1>
+      <img src="robot.png" alt="Robot Elf" class="robot">
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <h2>使命</h2>
+        <p>探索人工智能驱动的未来，引领学习、投资与生物医学的范式变革。</p>
+      </div>
+      <div class="card">
+        <h2>愿景</h2>
+        <p><strong>AI学习范式：</strong>革新知识获取与教育，利用AI打造个性化、智能化学习体验</p>
+        <p><strong>AI投资范式：</strong>通过认知提升和智能驱动，重塑财富管理与投资决策</p>
+        <p><strong>AI生医范式：</strong>探索生物技术和精准医疗，AI赋能健康与生命质量</p>
+      </div>
+      <div class="card">
+        <h2>文化</h2>
+        <p>长期主义，基于长期趋势和第一性原理构建信念体系</p>
+        <p>通过AI赋能，成就他人，成就客户</p>
+        <p>持续学习，持续进化</p>
+      </div>
+      <div class="card">
+        <h2>网站和公众号</h2>
+        <img src="wechat-qrcode-placeholder.png" alt="WeChat QR Code" class="qrcode">
+        <p><a href="https://digital-era.github.io/EvolutionaryParadigm" target="_blank">https://digital-era.github.io/EvolutionaryParadigm</a></p>
+        <p>公众号：digitconnect</p>
+      </div>
+    </div>
+    <div class="footer">
+      <p>理解AI、使用AI的个人和企业才能顺应时代趋势</p>
+    </div>
+  </div>
+  <script>
+    let particles = [];
+
+    function setup() {
+      createCanvas(windowWidth, windowHeight);
+      for (let i = 0; i < 50; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function draw() {
+      background(0, 50);
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].show();
+        for (let j = i + 1; j < particles.length; j++) {
+          let d = dist(particles[i].pos.x, particles[i].pos.y, particles[j].pos.x, particles[j].pos.y);
+          if (d < 100) {
+            stroke(0, 136, 255, map(d, 0, 100, 100, 0));
+            line(particles[i].pos.x, particles[i].pos.y, particles[j].pos.x, particles[j].pos.y);
+          }
+        }
+      }
+    }
+
+    function windowResized() {
+      resizeCanvas(windowWidth, windowHeight);
+    }
+
+    class Particle {
+      constructor() {
+        this.pos = createVector(random(width), random(height));
+        this.vel = createVector(0, 0);
+        this.size = 5;
+        this.phase = random(TWO_PI);
+      }
+
+      update() {
+        let time = millis() * 0.001;
+        this.vel.x = cos(this.phase + time) * 0.5;
+        this.vel.y = sin(this.phase + time) * 0.5;
+        this.pos.add(this.vel);
+        if (this.pos.x < 0) this.pos.x += width;
+        if (this.pos.x > width) this.pos.x -= width;
+        if (this.pos.y < 0) this.pos.y += height;
+        if (this.pos.y > height) this.pos.y -= height;
+      }
+
+      show() {
+        noStroke();
+        fill(0, 136, 255, 150);
+        ellipse(this.pos.x, this.pos.y, this.size);
+      }
+    }
+  </script>
+</body>
+</html>
