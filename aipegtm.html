@@ -8,12 +8,11 @@
   <style>
     body {
       margin: 0;
-      /* overflow: hidden;  移除这一行 */
       background: #000;
       color: #fff;
       font-family: 'Arial', sans-serif;
     }
-    canvas {
+    canvas { /* p5.js canvas, if you use it for visuals */
       position: fixed;
       top: 0;
       left: 0;
@@ -22,43 +21,42 @@
     .container {
       position: relative;
       z-index: 1;
-      padding: 10px; /* Reduced padding */
+      padding: 10px;
       text-align: center;
-      min-height: 100vh; /* Ensure container fills viewport */
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      /*justify-content: center; Center content vertically */
-      justify-content: space-between; /* 将 header 推到顶部，footer 推到底部 */
+      justify-content: space-between;
     }
     .header {
       background: rgba(0, 0, 0, 0.7);
-      padding: 10px; /* Reduced padding */
+      padding: 10px;
       border-radius: 10px;
-      margin: 5px 0; /* Reduced margin */
+      margin: 5px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     .footer {
       background: rgba(0, 0, 0, 0.7);
-      padding: 10px; /* Reduced padding */
+      padding: 10px;
       border-radius: 10px;
-      margin: 5px 0; /* Reduced margin */
+      margin: 5px 0;
       text-align: center;
     }
     .card-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px; /* Slightly reduced gap */
-      margin: 5px 0; /* Reduced margin */
+      gap: 15px;
+      margin: 5px 0;
     }
     .card {
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid #0088ff;
       border-radius: 10px;
-      padding: 15px; /* Reduced padding */
-      width: calc(50% - 30px); /* Adjusted for smaller gap */
+      padding: 15px;
+      width: calc(50% - 30px);
       box-shadow: 0 0 20px rgba(0, 136, 255, 0.5);
       transition: transform 0.3s;
       text-align: left;
@@ -68,7 +66,7 @@
       transform: scale(1.05);
     }
     .logo, .robot {
-      width: 80px; /* Slightly smaller images */
+      width: 80px;
       height: 80px;
       border-radius: 50%;
       display: inline-block;
@@ -81,25 +79,25 @@
       margin-right: 10px;
     }
     h1 {
-      font-size: 2em; /* Reduced font size */
+      font-size: 2em;
       text-shadow: 0 0 10px #0088ff;
-      margin: 5px 0; /* Reduced margin */
+      margin: 5px 0;
     }
     h2 {
-      font-size: 1.2em; /* Reduced font size */
+      font-size: 1.2em;
       text-shadow: 0 0 10px #0088ff;
-      margin: 5px 0; /* Reduced margin */
+      margin: 5px 0;
       text-align: center;
     }
     p {
       text-shadow: 0 0 10px #0088ff;
-      margin: 5px 0; /* Reduced margin */
-      font-size: 0.9em; /* Slightly smaller font */
+      margin: 5px 0;
+      font-size: 0.9em;
     }
     .footer p {
-      font-size: 1.2em; /* Reduced font size */
+      font-size: 1.2em;
       text-shadow: 0 0 10px #0088ff;
-      margin: 5px 0; /* Reduced margin */
+      margin: 5px 0;
     }
     a {
       color: #0088ff;
@@ -109,15 +107,45 @@
       text-decoration: underline;
     }
     .qrcode {
-      width: 80px; /* Slightly smaller QR code */
+      width: 80px;
       height: 80px;
       float: right;
       margin-left: 15px;
       margin-bottom: 5px;
     }
+
+    /* Styles for the audio player controls (方案 1: 左下角固定) */
+    .audio-controls {
+      position: fixed; /* Fixed position relative to the viewport */
+      bottom: 20px;    /* 20px from the bottom */
+      left: 20px;      /* 20px from the left */
+      background: rgba(0,0,0,0.8);
+      padding: 10px 15px;
+      border-radius: 25px; 
+      box-shadow: 0 0 15px #0088ff;
+      z-index: 100;
+    }
+    .audio-controls button {
+      background-color: #0088ff;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+    .audio-controls button:hover {
+      background-color: #0055cc;
+    }
   </style>
 </head>
 <body>
+
+  <audio id="backgroundAudio" autoplay loop>
+    <source src="audio/concatenated_voice_with_music.mp3" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
   <div class="container">
     <div class="header">
       <img src="images/logo.png" alt="AIPE Logo" class="logo">
@@ -153,6 +181,67 @@
     </div>
   </div>
 
+  <div class="audio-controls">
+    <button id="playPauseButton">播放</button>
+  </div>
+
+<script>
+  function setup() {
+    createCanvas(windowWidth, windowHeight);
+  }
+
+  function draw() {
+    background(0, 10); 
+  }
+
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
+
+  const audio = document.getElementById('backgroundAudio');
+  const playPauseButton = document.getElementById('playPauseButton');
+  let isPlaying = false; 
+
+  audio.oncanplaythrough = () => {
+    if (!audio.paused) {
+        isPlaying = true;
+        playPauseButton.textContent = '暂停';
+    } else {
+        isPlaying = false;
+        playPauseButton.textContent = '播放';
+    }
+  };
+
+  audio.onplay = () => {
+    isPlaying = true;
+    playPauseButton.textContent = '暂停';
+  };
+
+  audio.onpause = () => {
+    isPlaying = false;
+    playPauseButton.textContent = '播放';
+  };
+
+  audio.onended = () => {
+      if (!audio.loop) {
+        isPlaying = false;
+        playPauseButton.textContent = '播放';
+      }
+  };
+
+  playPauseButton.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(_ => {}).catch(error => {
+          console.error("Audio playback failed:", error);
+        });
+      }
+    }
+  });
+</script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93d7655aecb1bfd8',t:'MTc0Njg1ODcxMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
