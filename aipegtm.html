@@ -109,9 +109,11 @@
     .qrcode {
       width: 80px;
       height: 80px;
-      float: right;
-      margin-left: 15px;
-      margin-bottom: 5px;
+      display: block; /* 使其成为块级元素，这样 margin: auto 能生效 */
+      margin-left: auto;  /* 左外边距自动 */
+      margin-right: auto; /* 右外边距自动 */
+      margin-bottom: 10px; /* 可以保留或调整底部外边距，给下面的文字留空间 */
+      /* margin-top: 10px; */ /* 如果二维码上方有文字，也可以加个顶部外边距 */
     }
 
     /* Styles for the audio player controls (高度减小) */
