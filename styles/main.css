@@ -258,11 +258,13 @@ body {
 
 .login-form label {
   color: #fff;
-  display: inline-flex; /* 改为 inline-flex，复选框和文本不换行 */
-  align-items: center; /* 垂直居中 */
-  gap: 5px; /* 复选框和文本间距 */
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   margin: 10px 0;
   cursor: pointer;
+  white-space: nowrap; /* 强制文本在一行 */
+  font-size: 14px; /* 缩小字体，减少宽度 */
 }
 
 .cf-turnstile {
