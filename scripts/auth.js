@@ -1,27 +1,3 @@
-let turnstileToken = null;
-
-function initTurnstile() {
-  if (window.turnstile && !turnstileToken) {
-    window.turnstile.render('.cf-turnstile', {
-      sitekey: '0x4AAAAAABc5G-f32NFLbksc',
-      callback: function(token) {
-        turnstileToken = token;
-      },
-      'error-callback': function() {
-        alert('Turnstile 验证失败，请检查网络或稍后重试！');
-        turnstileToken = null;
-      },
-      'timeout-callback': function() {
-        alert('Turnstile 验证超时，请刷新页面！');
-        turnstileToken = null;
-      }
-    });
-  }
-}
-
-// 页面加载时初始化 Turnstile
-document.addEventListener('DOMContentLoaded', initTurnstile);
-
 // 清理输入中的不可见字符
 function sanitizeInput(input) {
   return input.trim().replace(/\s+/g, '');
@@ -37,21 +13,30 @@ function signup() {
     return;
   }
 
-  if (!turnstileToken) {
-    alert('请完成 Turnstile 验证！');
-    initTurnstile();
-    return;
+  if (window.turnstile) {
+    window.turnstile.render('.cf-turnstile', {
+      sitekey: 'YOUR_TURNSTILE_SITEKEY', // 替换为真实 Sitekey
+      callback: function(token) {
+        if (localStorage.getItem('user_' + username)) {
+          alert('用户名已存在，请选择其他用户名！');
+        } else {
+          localStorage.setItem('user_' + username, JSON.stringify({ password, remember }));
+          alert('注册成功！请在其他设备上使用相同用户名和密码登录。');
+        }
+        window.turnstile.reset('.cf-turnstile');
+      },
+      'error-callback': function(error) {
+        console.error('Turnstile 错误:', error);
+        alert('Turnstile 验证失败：' + (error || '未知错误') + '，请检查网络或稍后重试！');
+      },
+      'timeout-callback': function() {
+        console.warn('Turnstile 超时');
+        alert('Turnstile 验证超时，请刷新页面！');
+      }
+    });
+  } else {
+    alert('无法加载 Turnstile 脚本，请检查网络或禁用广告拦截！');
   }
-
-  if (localStorage.getItem('user_' + username)) {
-    alert('用户名已存在，请选择其他用户名！');
-    return;
-  }
-
-  localStorage.setItem('user_' + username, JSON.stringify({ password, remember }));
-  alert('注册成功！请在其他设备上使用相同用户名和密码登录。');
-  turnstileToken = null; // 重置 token
-  window.turnstile.reset('.cf-turnstile');
 }
 
 function login() {
@@ -64,30 +49,35 @@ function login() {
     return;
   }
 
-  if (!turnstileToken) {
-    alert('请完成 Turnstile 验证！');
-    initTurnstile();
-    return;
-  }
-
-  const user = JSON.parse(localStorage.getItem('user_' + username));
-  if (!user) {
-    alert('用户不存在，请先注册！');
-    turnstileToken = null;
-    window.turnstile.reset('.cf-turnstile');
-    return;
-  }
-
-  if (user.password === password) {
-    if (remember) {
-      localStorage.setItem('loggedInUser', username);
-    }
-    alert('登录成功！');
-    window.location.href = 'ai-learning.html';
+  if (window.turnstile) {
+    window.turnstile.render('.cf-turnstile', {
+      sitekey: 'YOUR_TURNSTILE_SITEKEY', // 替换为真实 Sitekey
+      callback: function(token) {
+        const user = JSON.parse(localStorage.getItem('user_' + username));
+        if (!user) {
+          alert('用户不存在，请先注册！');
+        } else if (user.password === password) {
+          if (remember) {
+            localStorage.setItem('loggedInUser', username);
+          }
+          alert('登录成功！');
+          window.location.href = 'ai-learning.html';
+        } else {
+          alert('密码错误，请重试！');
+        }
+        window.turnstile.reset('.cf-turnstile');
+      },
+      'error-callback': function(error) {
+        console.error('Turnstile 错误:', error);
+        alert('Turnstile 验证失败：' + (error || '未知错误') + '，请检查网络或稍后重试！');
+      },
+      'timeout-callback': function() {
+        console.warn('Turnstile 超时');
+        alert('Turnstile 验证超时，请刷新页面！');
+      }
+    });
   } else {
-    alert('密码错误，请重试！');
-    turnstileToken = null;
-    window.turnstile.reset('.cf-turnstile');
+    alert('无法加载 Turnstile 脚本，请检查网络或禁用广告拦截！');
   }
 }
 
