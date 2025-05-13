@@ -15,7 +15,7 @@ function signup() {
 
   if (window.turnstile) {
     window.turnstile.render('.cf-turnstile', {
-      sitekey: 'YOUR_TURNSTILE_SITEKEY', // 替换为真实 Sitekey
+      sitekey: '0x4AAAAAABc5G-f32NFLbksc', // 替换为真实 Sitekey
       callback: function(token) {
         if (localStorage.getItem('user_' + username)) {
           alert('用户名已存在，请选择其他用户名！');
