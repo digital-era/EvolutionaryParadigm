@@ -12,7 +12,7 @@ function sanitizeInput(input) {
 // GitHub 配置
 const GITHUB_RAW_URL = 'https://raw.githubusercontent.com/digital-era/EvolutionaryParadigm/main/data/users.json';
 const GITHUB_API_URL = 'https://api.github.com/repos/digital-era/EvolutionaryParadigm/contents/data/users.json';
-const GITHUB_TOKEN = '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'; // 替换为您的 PAT
+const GITHUB_TOKEN = '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'; // 替换为您的 PAT
 
 async function fetchUsers() {
   try {
