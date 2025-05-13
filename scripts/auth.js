@@ -3,7 +3,7 @@ let turnstileToken = null;
 function initTurnstile() {
   if (window.turnstile && !turnstileToken) {
     window.turnstile.render('.cf-turnstile', {
-      sitekey: '0x4AAAAAAXXXX',
+      sitekey: '0x4AAAAAABc5G-f32NFLbksc',
       callback: function(token) {
         turnstileToken = token;
       },
