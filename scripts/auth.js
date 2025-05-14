@@ -4,20 +4,17 @@ function hash(str) {
   return h & 0x7fffffff;
 }
 
-// 清理输入中的不可见字符
 function sanitizeInput(input) {
   return input.trim().replace(/\s+/g, '');
 }
 
-// GitHub 配置
-const GITHUB_RAW_URL = 'https://raw.githubusercontent.com/digital-era/EvolutionaryParadigm/main/data/users.json';
-const GITHUB_API_URL = 'https://api.github.com/repos/digital-era/EvolutionaryParadigm/contents/data/users.json';
-const GITHUB_TOKEN = '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'; // 替换为您的 PAT
+const OSS_API_URL = 'https://aiep-users.vercel.app/api/oss-users/oss-users';
 
 async function fetchUsers() {
   try {
-    const response = await fetch(GITHUB_RAW_URL);
-    return response.ok ? await response.json() : {};
+    const response = await fetch(OSS_API_URL);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return await response.json();
   } catch (error) {
     console.error('获取用户数据失败:', error);
     alert('无法连接到用户数据存储，请检查网络！');
@@ -27,28 +24,12 @@ async function fetchUsers() {
 
 async function saveUsers(users) {
   try {
-    // 获取当前文件 SHA（避免覆盖）
-    const getResponse = await fetch(GITHUB_API_URL, {
-      headers: { 'Authorization': `Bearer ${GITHUB_TOKEN}`, 'Accept': 'application/vnd.github.v3+json' }
+    const response = await fetch(OSS_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ users })
     });
-    const { sha } = await getResponse.json();
-
-    // 编码内容为 Base64
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(users))));
-    const response = await fetch(GITHUB_API_URL, {
-      method: 'PUT',
-      headers: {
-        'Authorization': `Bearer ${GITHUB_TOKEN}`,
-        'Accept': 'application/vnd.github.v3+json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        message: 'Update users.json',
-        content,
-        sha
-      })
-    });
-    if (!response.ok) throw new Error('GitHub API 写入失败');
+    if (!response.ok) throw new Error(`OSS API error: HTTP ${response.status}`);
   } catch (error) {
     console.error('保存用户数据失败:', error);
     alert('无法保存用户数据，请稍后重试！');
@@ -94,6 +75,10 @@ async function login() {
     if (window.turnstile) window.turnstile.reset('.cf-turnstile');
     return;
   }
+  if (!username || !password) {
+    alert('请输入用户名和密码！');
+    return;
+  }
 
   const users = await fetchUsers();
   if (!users[username]) {
@@ -135,13 +120,11 @@ function checkAuth() {
   }
 }
 
-// 显示/隐藏密码
 function togglePassword() {
   const passwordInput = document.getElementById('password');
   passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
 }
 
-// 初始化 Turnstile 并处理错误
 document.addEventListener('DOMContentLoaded', () => {
   if (window.turnstile) {
     window.turnstile.render('.cf-turnstile', {
