@@ -8,7 +8,7 @@ function sanitizeInput(input) {
   return input.trim().replace(/\s+/g, '');
 }
 
-const OSS_API_URL = 'https://aiep-users.vercel.app/api/oss-users/oss-users';
+const OSS_API_URL = 'https://aiep-users.vercel.app/api/oss-users/';
 
 async function fetchUsers() {
   try {
