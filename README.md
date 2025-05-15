@@ -26,17 +26,5 @@ AI学习页面：2x2网格卡片（如“前沿信息”“深入调研”），
 导航栏：固定顶部导航，当前页面高亮，链接悬停变蓝。
 可访问性：语义化 HTML，包含备用字体（Roboto、Arial）和 CDN 回退。
 
-项目结构
-evolution-paradigm/
-├── index.html              # 首页，包含英雄区和范式卡片
-├── ai-learning.html        # AI学习范式页面，含2x2网格
-├── ai-investment.html      # AI投资范式页面
-├── ai-biomed.html          # AI生医范式页面
-├── styles.css              # 全局样式（响应式设计、动画、霓虹效果）
-├── scripts.js              # Particle.js 背景配置
-├── README.md               # 项目文档
-└── particles.min.js        # （可选）Particle.js 本地副本
-
-
 © 2025 进化范式。保留所有权利。
 本项目仅用于展示目的。如需使用权限，请联系维护者。
