@@ -114,7 +114,7 @@ function checkAuth() {
     if (restricted) restricted.style.display = 'block';
   } else {
     authLink.innerHTML = `<a href="login.html">登录</a>`;
-    if (window.location.pathname.includes('ai-learning.html')) {
+    if (window.location.pathname.includes('ai-learning-caselist.html')) {
       window.location.href = 'login.html';
     }
   }
