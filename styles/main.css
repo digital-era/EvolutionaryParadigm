@@ -139,7 +139,7 @@ body {
         #007CF0  /* Bright Blue - repeat first color for smooth loop */
     );
     background-size: 200% auto;
-    color: #fff; /* 默认白色 */
+    color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
     animation: gradientWave 6s linear infinite;
