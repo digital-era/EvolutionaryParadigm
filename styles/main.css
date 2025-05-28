@@ -599,7 +599,8 @@ footer {
     }
     .cta-button {
         padding: 12px 24px; /* 移动端减小内边距 */
-        font-size: 14px;
+        font-size: 14px;        
+        flex: 1; /* 让按钮平均分配空间，从而等宽 */
     }
     .sections {
         padding: 50px 20px;
