@@ -183,6 +183,7 @@ body {
     font-weight: bold;
     transition: background 0.3s;
     text-align: center;
+    flex: 1; /* 让按钮平均分配空间，从而等宽 */
 }
 
 .cta-button:hover {
