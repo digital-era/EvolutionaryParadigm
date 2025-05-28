@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const availableLangsFromData = Object.keys(translations);
     if (availableLangsFromData.includes('zh-CN')) {
-        langSwitcher.innerHTML += `<button data-lang="zh-CN" class="${currentLang === 'zh-CN' ? 'active' : ''}">中文</button>`;
+        langSwitcher.innerHTML += `<button data-lang="zh-CN" class="${currentLang === 'zh-CN' ? 'active' : ''}">CN</button>`;
     }
     if (availableLangsFromData.includes('en')) {
          langSwitcher.innerHTML += `<button data-lang="en" class="${currentLang === 'en' ? 'active' : ''}">EN</button>`;
