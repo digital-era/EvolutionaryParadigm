@@ -142,8 +142,8 @@ body {
     color: #fff; /* 默认白色 */
     -webkit-background-clip: text;
     background-clip: text;
-    animation: gradientWave 6s ease-in-out infinite;
-    -webkit-animation: gradientWave 6s ease-in-out infinite;
+    animation: gradientWave 6s linear infinite;
+    -webkit-animation: gradientWave 6s linear infinite;
 }
 
 /* 颜色波动画 */
