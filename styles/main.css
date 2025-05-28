@@ -33,6 +33,36 @@ body {
     z-index: 10;
 }
 
+/* Add Language selection */
+.lang-switcher {
+    display: inline-flex; /* Or block, depending on layout */
+    align-items: center;
+    margin-left: 10px; /* Adjust as needed */
+}
+.lang-switcher button {
+    background-color: transparent; /* Or match your nav style */
+    color: #fff; /* Or match your nav link color */
+    border: 1px solid #fff; /* Example border */
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 0.5em; /* Adjust as needed */
+    line-height: 0.6;
+}
+.nav-links .lang-switcher button { /* More specific if in navbar */
+    font-size: inherit; /* Match navbar link font size */
+    padding: 0.5em 0.7em; /* Match other nav links padding if any */
+}
+.lang-switcher button.active {
+    background-color: #0088ff; /* Highlight active language */
+    color: white;
+    font-weight: bold;
+}
+.lang-switcher button:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
 .logo {
     font-family: 'Orbitron', 'Helvetica Neue', sans-serif; /* 增加备用字体 */
     font-size: 24px;
