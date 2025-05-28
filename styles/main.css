@@ -183,9 +183,9 @@ body {
     font-weight: bold;
     transition: background 0.3s;
     text-align: center;
-    flex-grow: 1;
-    flex-shrink: 1; /* 通常与grow一起 */
-    flex-basis: 0;  /* 非常重要：让按钮从0宽度开始，然后平均分配空间 */
+    // flex-grow: 1;
+    // flex-shrink: 1; 
+    // flex-basis: 0; 
 }
 
 .cta-button:hover {
@@ -601,10 +601,7 @@ footer {
     }
     .cta-button {
         padding: 12px 24px; /* 移动端减小内边距 */
-        font-size: 14px;        
-        flex-grow: 1;
-        flex-shrink: 1; /* 通常与grow一起 */
-        flex-basis: 0;  /* 非常重要：让按钮从0宽度开始，然后平均分配空间 */
+        font-size: 14px;     
     }
     .sections {
         padding: 50px 20px;
