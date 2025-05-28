@@ -8,6 +8,12 @@ function sanitizeInput(input) {
   return input.trim().replace(/\s+/g, '');
 }
 
+// Translation helper function
+function t(key, params = {}) {
+  const text = translations[currentLang] && translations[currentLang][key] ? translations[currentLang][key] : key;
+  return Object.keys(params).reduce((str, k) => str.replace(`{${k}}`, params[k]), text);
+}
+
 const OSS_API_URL = 'https://aiep-users.vercel.app/api/oss-users/oss-users';
 
 async function fetchUsers() {
@@ -16,8 +22,8 @@ async function fetchUsers() {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (error) {
-    console.error('获取用户数据失败:', error);
-    alert('无法连接到用户数据存储，请检查网络！');
+    console.error(t('auth_fetch_users_error'), error);
+    alert(t('auth_fetch_users_alert'));
     return {};
   }
 }
@@ -31,8 +37,8 @@ async function saveUsers(users) {
     });
     if (!response.ok) throw new Error(`OSS API error: HTTP ${response.status}`);
   } catch (error) {
-    console.error('保存用户数据失败:', error);
-    alert('无法保存用户数据，请稍后重试！');
+    console.error(t('auth_save_users_error'), error);
+    alert(t('auth_save_users_alert'));
   }
 }
 
@@ -42,19 +48,19 @@ async function signup() {
   const token = document.querySelector('.cf-turnstile input[name="cf-turnstile-response"]')?.value;
 
   if (!token) {
-    alert('请通过 Turnstile 验证！');
-    console.error('缺少 Turnstile token，请检查 Sitekey 或网络');
+    alert(t('auth_missing_turnstile_alert'));
+    console.error(t('auth_missing_turnstile_error'));
     if (window.turnstile) window.turnstile.reset('.cf-turnstile');
     return;
   }
   if (!username || !password) {
-    alert('请输入用户名和密码！');
+    alert(t('auth_missing_credentials_alert'));
     return;
   }
 
   const users = await fetchUsers();
   if (users[username]) {
-    alert('用户已存在！');
+    alert(t('auth_user_exists_alert'));
     return;
   }
 
@@ -70,29 +76,29 @@ async function login() {
   const token = document.querySelector('.cf-turnstile input[name="cf-turnstile-response"]')?.value;
 
   if (!token) {
-    alert('请通过 Turnstile 验证！');
-    console.error('缺少 Turnstile token，请检查 Sitekey 或网络');
+    alert(t('auth_missing_turnstile_alert'));
+    console.error(t('auth_missing_turnstile_error'));
     if (window.turnstile) window.turnstile.reset('.cf-turnstile');
     return;
   }
   if (!username || !password) {
-    alert('请输入用户名和密码！');
+    alert(t('auth_missing_credentials_alert'));
     return;
   }
 
   const users = await fetchUsers();
   if (!users[username]) {
-    alert('用户不存在，请先注册！');
+    alert(t('auth_user_not_found_alert'));
     return;
   }
   if (users[username].password !== hash(password)) {
-    alert('密码错误，请重试！');
+    alert(t('auth_invalid_password_alert'));
     return;
   }
 
   const expires = remember ? 7 : 1;
   document.cookie = `auth=${users[username].id};max-age=${expires * 86400};path=/`;
-  alert('登录成功！');
+  alert(t('auth_login_success_alert'));
   window.location.href = 'index.html';
 }
 
@@ -109,7 +115,7 @@ function checkAuth() {
   }, {});
   const authLink = document.getElementById('auth-link');
   if (cookies.auth) {
-    authLink.innerHTML = `<a href="#" onclick="logout()">退出</a>`;
+    authLink.innerHTML = `<a href="#" onclick="logout()">${t('auth_logout_link')}</a>`;
     const restricted = document.getElementById('restricted-content');
     if (restricted) restricted.style.display = 'block';
   } 
@@ -124,16 +130,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.turnstile) {
     window.turnstile.render('.cf-turnstile', {
       callback: function(token) {
-        console.log('Turnstile 验证通过，token:', token);
+        console.log(t('auth_turnstile_success'), token);
       },
       'error-callback': function(error) {
-        console.error('Turnstile 错误:', error);
-        alert('Turnstile 验证失败：' + (error || '未知错误') + '，请检查 Sitekey 或网络！');
+        console.error(t('auth_turnstile_error'), error);
+        alert(t('auth_turnstile_error_alert', { error: error || 'unknown error' }));
         window.turnstile.reset('.cf-turnstile');
       },
       'timeout-callback': function() {
-        console.warn('Turnstile 超时');
-        alert('Turnstile 验证超时，请刷新页面！');
+        console.warn(t('auth_turnstile_timeout'));
+        alert(t('auth_turnstile_timeout_alert'));
         window.turnstile.reset('.cf-turnstile');
       }
     });

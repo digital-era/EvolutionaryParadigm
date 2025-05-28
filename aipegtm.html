@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-page-title="aipegtm.pageTitle"> <!-- Default lang can be zh-CN after JS runs -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Paradigm Evolution GTM</title>
+  <title data-i18n="aipegtm.pageTitle">AI Paradigm Evolution GTM</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
   <!-- Microsoft Clarity 跟踪代码 -->
   <script type="text/javascript">
@@ -163,6 +163,31 @@
     .audio-controls button:hover {
       background-color: #0055cc;
     }
+    /* Styles for language switcher if not in navbar */
+    .lang-switcher {
+        display: inline-block; /* Or flex, depending on layout needs */
+        margin-left: 10px; /* Example spacing */
+    }
+    .lang-switcher button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        margin-left: 5px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+    .lang-switcher button.active {
+        background-color: #0056b3;
+    }
+    .lang-switcher button:hover {
+        background-color: #0056b3;
+    }
+    /* Adjust if lang switcher is in navbar */
+    .nav-links .lang-switcher button {
+        font-size: inherit; /* Match navbar link font size */
+        /* Add other styles to match navbar items if needed */
+    }
   </style>
 </head>
 <body>
@@ -178,40 +203,41 @@
   <div class="container">
     <div class="header">
       <img src="images/logo.png" alt="AIPE Logo" class="logo">
-      <h1>AI范式进化，引领未来</h1>
+      <h1 data-i18n="aipegtm.header.title">AI Paradigm Evolution, Leading the Future</h1>
       <img src="images/robot.png" alt="Robot Elf" class="robot">
+      <!-- Language switcher will be added here by i18n.js if navbar isn't found, or to navbar if found -->
     </div>
     <div class="card-container">
       <div class="card">
-        <h2>使命</h2>
-        <p>探索人工智能驱动的未来，引领学习、投资与生物医学的范式变革</p>
+        <h2 data-i18n="aipegtm.card.mission.title">Mission</h2>
+        <p data-i18n="aipegtm.card.mission.desc">Explore the AI-driven future, leading paradigm shifts in learning, investment, and biomedicine.</p>
       </div>
       <div class="card">
-        <h2>愿景</h2>
-        <p>革新知识获取，利用AI打造个性化学习体验</p>
-        <p>通过AI重塑财富管理与投资决策</p>
-        <p>探索AI赋能健康与生命质量</p>
+        <h2 data-i18n="aipegtm.card.vision.title">Vision</h2>
+        <p data-i18n="aipegtm.card.vision.desc1">Revolutionize knowledge acquisition, creating personalized learning experiences with AI.</p>
+        <p data-i18n="aipegtm.card.vision.desc2">Reshape wealth management and investment decisions through AI.</p>
+        <p data-i18n="aipegtm.card.vision.desc3">Explore AI empowering health and quality of life.</p>
       </div>
       <div class="card">
-        <h2>文化</h2>
-        <p>长期主义，基于第一性原理构建信念体系</p>
-        <p>通过AI赋能，成就他人和客户</p>
-        <p>持续学习，持续进化</p>
+        <h2 data-i18n="aipegtm.card.culture.title">Culture</h2>
+        <p data-i18n="aipegtm.card.culture.desc1">Long-termism, building a belief system based on first principles.</p>
+        <p data-i18n="aipegtm.card.culture.desc2">Empower and achieve success for others and clients through AI.</p>
+        <p data-i18n="aipegtm.card.culture.desc3">Continuous learning, continuous evolution.</p>
       </div>
       <div class="card">
-        <h2>网址公众号</h2>
-        <img src="images/wechatqrcode.png" alt="WeChat QR Code" class="qrcode">
-        <p><a href="https://digital-era.github.io/EvolutionaryParadigm" target="_blank">AI范式进化网站：网址链接</a></p>
-        <p>公众号：digitconnect</p>
+        <h2 data-i18n="aipegtm.card.contact.title">Website & Official Account</h2>
+        <img src="images/wechatqrcode.png" data-i18n-alt="aipegtm.card.contact.qrcode.alt" alt="WeChat QR Code" class="qrcode">
+        <p><a href="https://digital-era.github.io/EvolutionaryParadigm" target="_blank" data-i18n="aipegtm.card.contact.website_link_text">AI Paradigm Evolution Website: Link</a></p>
+        <p data-i18n="aipegtm.card.contact.wechat_id">Official Account: digitconnect</p>
       </div>
     </div>
     <div class="footer">
-      <p>理解AI、使用AI的个人和企业才能顺应时代趋势</p>
+      <p data-i18n="aipegtm.footer.text">Individuals and businesses that understand and use AI can adapt to the trends of the times.</p>
     </div>
   </div>
 
   <div class="audio-controls">
-    <button id="playPauseButton">播放</button>
+    <button id="playPauseButton" data-i18n="aipegtm.audio.play">Play</button>
   </div>
 
 <script>
@@ -231,30 +257,47 @@
   const playPauseButton = document.getElementById('playPauseButton');
   let isPlaying = false; 
 
+  // Keys for translation
+  const playTextKey = "aipegtm.audio.play";
+  const pauseTextKey = "aipegtm.audio.pause";
+
+  // Function to update button text based on current language
+  function updateAudioButtonText() {
+    const lang = document.documentElement.lang || 'zh-CN'; // Get current language
+    const langData = window.translations && window.translations[lang.startsWith('zh') ? 'zh-CN' : 'en'];
+
+    if (langData) {
+        playPauseButton.textContent = isPlaying ? (langData[pauseTextKey] || 'Pause') : (langData[playTextKey] || 'Play');
+    } else {
+        // Fallback if translations not loaded yet or key missing
+        playPauseButton.textContent = isPlaying ? 'Pause' : 'Play';
+    }
+  }
+
+
   audio.oncanplaythrough = () => {
     if (!audio.paused) {
         isPlaying = true;
-        playPauseButton.textContent = '暂停';
     } else {
         isPlaying = false;
-        playPauseButton.textContent = '播放';
     }
+    updateAudioButtonText();
   };
 
   audio.onplay = () => {
     isPlaying = true;
-    playPauseButton.textContent = '暂停';
+    updateAudioButtonText();
   };
 
   audio.onpause = () => {
     isPlaying = false;
-    playPauseButton.textContent = '播放';
+    updateAudioButtonText();
   };
 
   audio.onended = () => {
       if (!audio.loop) {
         isPlaying = false;
-        playPauseButton.textContent = '播放';
+        updateAudioButtonText();
       }
   };
 
@@ -270,7 +313,15 @@
       }
     }
   });
+
+  // Listen for language changes to update button text
+  document.addEventListener('languageChanged', updateAudioButtonText);
+
 </script>
+<!-- Cloudflare challenge script removed for brevity, assume it's still there -->
+
+<script src="locales/translations-data.js"></script>
+<script src="scripts/i18n.js"></script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93d7655aecb1bfd8',t:'MTc0Njg1ODcxMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>

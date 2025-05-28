@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-i18n-page-title="login.pageTitle">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录 - AI范式进化</title>
+    <title data-i18n="login.pageTitle">登录 - AI范式进化</title>
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <!-- Microsoft Clarity 跟踪代码 -->
@@ -28,30 +28,33 @@
 <body>
     <div id="particles-js"></div>
     <nav class="navbar">
-        <div class="logo">AI范式进化</div>
+        <div class="logo" data-i18n="nav.logo">AI范式进化</div>
         <ul class="nav-links">
-            <li><a href="index.html">首页</a></li>
-            <li><a href="ai-learning.html">AI学习范式</a></li>
-            <li><a href="ai-investment.html">AI投资范式</a></li>
-            <li><a href="ai-biomed.html">AI生医范式</a></li>
+            <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+            <li><a href="ai-learning.html" data-i18n="nav.ai_learning">AI学习范式</a></li>
+            <li><a href="ai-investment.html" data-i18n="nav.ai_investment">AI投资范式</a></li>
+            <li><a href="ai-biomed.html" data-i18n="nav.ai_biomed">AI生医范式</a></li>
+            <!-- Language switcher will be added here by i18n.js -->
         </ul>
     </nav>
     <section class="login">
-        <h1>登录注册</h1>
+        <h1 data-i18n="login.mainTitle">登录注册</h1>
         <div class="login-form">
-            <input type="text" id="username" placeholder="用户名" required>
-            <input type="password" id="password" placeholder="密码" required>
-            <label><input type="checkbox" id="remember"> 记住我（7天）</label>
+            <input type="text" id="username" data-i18n-placeholder="login.usernamePlaceholder" placeholder="用户名" required>
+            <input type="password" id="password" data-i18n-placeholder="login.passwordPlaceholder" placeholder="密码" required>
+            <label><input type="checkbox" id="remember"> <span data-i18n="login.rememberLabel">记住我（7天）</span></label>
             <div class="cf-turnstile" data-sitekey="0x4AAAAAABc5G-f32NFLbksc"></div>
-            <button onclick="login()">登录</button>
-            <button onclick="signup()">注册</button>
+            <button onclick="login()" data-i18n="login.loginButton">登录</button>
+            <button onclick="signup()" data-i18n="login.signupButton">注册</button>
         </div>
     </section>
     <footer>
-        <p>© 2025 AI范式进化. 保留所有权利。</p>
+        <p data-i18n="footer.copyright">© 2025 AI范式进化. 保留所有权利。</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/auth.js"></script>
+    <script src="locales/translations-data.js"></script>
+    <script src="scripts/i18n.js"></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-i18n-page-title="index.pageTitle"> <!-- Added data-i18n-page-title -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI范式进化</title>
+    <title data-i18n="index.pageTitle">AI范式进化</title> <!-- Changed to data-i18n -->
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <!-- Microsoft Clarity 跟踪代码 -->
@@ -30,55 +30,59 @@
 
     <!-- 导航栏 -->
     <nav class="navbar">
-        <div class="logo">AI范式进化</div>
+        <div class="logo" data-i18n="nav.logo">AI范式进化</div>
         <ul class="nav-links">
-            <li><a href="index.html" class="active">首页</a></li>
-            <li><a href="ai-learning.html">AI学习范式</a></li>
-            <li><a href="ai-investment.html">AI投资范式</a></li>
-            <li><a href="ai-biomed.html">AI生医范式</a></li>
-            <li id="auth-link"><a href="login.html">登录</a></li>
+            <li><a href="index.html" class="active" data-i18n="nav.home">首页</a></li>
+            <li><a href="ai-learning.html" data-i18n="nav.ai_learning">AI学习范式</a></li>
+            <li><a href="ai-investment.html" data-i18n="nav.ai_investment">AI投资范式</a></li>
+            <li><a href="ai-biomed.html" data-i18n="nav.ai_biomed">AI生医范式</a></li>
+            <li id="auth-link"><a href="login.html" data-i18n="nav.login">登录</a></li>
+            <!-- Language switcher will be added here by i18n.js -->
         </ul>
     </nav>
 
     <!-- 首页内容 -->
     <section class="hero">
-        <h1 class="hero-title">
-          <span class="letter">A</span><span class="letter">I</span><span class="letter">范</span><span class="letter">式</span><span class="letter">进</span><span class="letter">化</span><span class="letter">，</span><span class="letter">引</span><span class="letter">领</span><span class="letter">未</span><span class="letter">来</span>
+        <h1 class="hero-title" data-i18n="index.hero.title">
+          AI范式进化，引领未来 <!-- Original text for non-JS, will be replaced -->
         </h1>
-        <p>探索人工智能驱动的未来，引领学习、投资与生物医学的范式变革</p>
+        <p data-i18n="index.hero.subtitle">探索人工智能驱动的未来，引领学习、投资与生物医学的范式变革</p>
         <div class="button-group">
-          <a href="#sections" class="cta-button">了解更多</a>
-          <a href="aipegtm.html" class="cta-button">关于我们</a>
+          <a href="#sections" class="cta-button" data-i18n="index.hero.button.learn_more">了解更多</a>
+          <a href="aipegtm.html" class="cta-button" data-i18n="index.hero.button.about_us">关于我们</a>
         </div>
     </section>
 
     <!-- 版块概览 -->
     <section id="sections" class="sections">
+        <!-- Removed h2 "版块概览" as it's usually a visual section title, can be added with data-i18n if needed -->
         <div class="section-card">
-            <h2>AI学习范式</h2>
-            <p>革新知识获取与教育，利用AI打造个性化、智能化学习体验。</p>
-            <a href="ai-learning.html" class="card-button">探索</a>
+            <h2 data-i18n="index.sections.learning.title">AI学习范式</h2>
+            <p data-i18n="index.sections.learning.desc">革新知识获取与教育，利用AI打造个性化、智能化学习体验。</p>
+            <a href="ai-learning.html" class="card-button" data-i18n="index.sections.learning.button">探索</a>
         </div>
         <div class="section-card">
-            <h2>AI投资范式</h2>
-            <p>通过认知提升和智能驱动，重塑财富管理与投资决策。</p>
-            <a href="ai-investment.html" class="card-button">探索</a>
+            <h2 data-i18n="index.sections.investment.title">AI投资范式</h2>
+            <p data-i18n="index.sections.investment.desc">通过认知提升和智能驱动，重塑财富管理与投资决策。</p>
+            <a href="ai-investment.html" class="card-button" data-i18n="index.sections.investment.button">探索</a>
         </div>
         <div class="section-card">
-            <h2>AI生医范式</h2>
-            <p>探索生物技术和精准医疗，AI赋能健康与生命质量。</p>
-            <a href="ai-biomed.html" class="card-button">探索</a>
+            <h2 data-i18n="index.sections.biomed.title">AI生医范式</h2>
+            <p data-i18n="index.sections.biomed.desc">探索生物技术和精准医疗，AI赋能健康与生命质量。</p>
+            <a href="ai-biomed.html" class="card-button" data-i18n="index.sections.biomed.button">探索</a>
         </div>
     </section>
 
     <!-- 页脚 -->
     <footer>
-        <p>© 2025 AI范式进化. 保留所有权利。</p>
+        <p data-i18n="footer.copyright">© 2025 AI范式进化. 保留所有权利。</p>
     </footer>
 
     <!-- 引入粒子背景和脚本 -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/auth.js"></script>
+    <script src="locales/translations-data.js"></script>
+    <script src="scripts/i18n.js"></script> <!-- Add the new i18n script -->
 </body>
 </html>
