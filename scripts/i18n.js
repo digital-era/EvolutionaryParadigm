@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const navbarLinks = document.querySelector('.navbar .nav-links');
     /*const aipegtmHeader = document.querySelector('body > .container > .header'); */
-    const aipegtmHeader = document.querySelector('header'); 
+    const aipegtmHeader = document.querySelector('.header'); 
 
     if (navbarLinks) {
         const langSwitcherLi = document.createElement('li');
