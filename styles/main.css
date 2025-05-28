@@ -132,41 +132,32 @@ body {
     font-family: 'Orbitron', 'Helvetica Neue', sans-serif;
     font-size: 60px;
     margin-bottom: 20px;
-}
-
-.hero-title .letter {
-    display: inline-block; /* 确保 span 按字符排列 */
+    background: linear-gradient(
+        90deg,
+        #007CF0, /* Bright Blue */
+        #00DFD8, /* Bright Cyan */
+        #007CF0  /* Bright Blue - repeat first color for smooth loop */
+    );
+    background-size: 200% auto;
     color: #fff; /* 默认白色 */
-    animation: colorWave 6s ease-in-out infinite;
-    will-change: color, text-shadow; /* 优化动画性能 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientWave 6s ease-in-out infinite;
+    -webkit-animation: gradientWave 6s ease-in-out infinite;
 }
 
 /* 颜色波动画 */
-@keyframes colorWave {
-    0%, 100% {
-        color: #fff;
-        text-shadow: none;
+@keyframes gradientWave {
+    0% {
+        background-position: 0% 50%;
     }
     50% {
-        color: #00d4ff;
-        text-shadow: 
-            0 0 10px rgba(0, 212, 255, 0.8),
-            0 0 15px rgba(0, 212, 255, 0.6);
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
-
-/* 为每个字设置延迟 */
-.hero-title .letter:nth-child(1) { animation-delay: 0s; }
-.hero-title .letter:nth-child(2) { animation-delay: 0.3s; }
-.hero-title .letter:nth-child(3) { animation-delay: 0.6s; }
-.hero-title .letter:nth-child(4) { animation-delay: 0.9s; }
-.hero-title .letter:nth-child(5) { animation-delay: 1.2s; }
-.hero-title .letter:nth-child(6) { animation-delay: 1.5s; }
-.hero-title .letter:nth-child(7) { animation-delay: 1.8s; }
-.hero-title .letter:nth-child(8) { animation-delay: 2.1s; }
-.hero-title .letter:nth-child(9) { animation-delay: 2.4s; }
-.hero-title .letter:nth-child(10) { animation-delay: 2.7s; }
-.hero-title .letter:nth-child(11) { animation-delay: 3.0s; }
 
 .hero p {
     font-size: 20px;
