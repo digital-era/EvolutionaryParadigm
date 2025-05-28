@@ -51,7 +51,7 @@ body {
     line-height: 0.6;
 }
 .nav-links .lang-switcher button { /* More specific if in navbar */
-    font-size: inherit; /* Match navbar link font size */
+    font-size: 10; /* Match navbar link font size */
     padding: 0.5em 0.7em; /* Match other nav links padding if any */
 }
 .lang-switcher button.active {
@@ -575,7 +575,7 @@ footer {
     }
 
     .nav-links a {
-        font-size: 7px; /* 减小字体 */
+        font-size: 10px; /* 减小字体 */
         white-space: nowrap;
     }
     
