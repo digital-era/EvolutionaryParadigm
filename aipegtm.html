@@ -166,12 +166,16 @@
     /* Styles for language switcher if not in navbar */
     .lang-switcher {
         display: inline-block; /* Or flex, depending on layout needs */
-        margin-right: 10px; /* Example spacing */
+        /*margin-right: 10px; Example spacing */
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
     }
     .lang-switcher button {
         background-color: #007bff;
-        color: white;
-        border: none;
+        color: #fff; /* Or match your nav link color */
+        border: 1px solid #fff; /* Example border */
         padding: 5px 10px;
         margin-right: 5px;
         cursor: pointer;
@@ -180,10 +184,12 @@
         line-height: 0.6;
     }
     .lang-switcher button.active {
-        background-color: #0056b3;
+        background-color: #0088ff; /* Highlight active language */
+        color: white;
+        font-weight: bold;
     }
-    .lang-switcher button:hover {
-        background-color: #0056b3;
+    .lang-switcher button:hover:not(.active) {
+        background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
     }
     /* Adjust if lang switcher is in navbar */
     .nav-links .lang-switcher button {
