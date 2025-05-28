@@ -163,7 +163,7 @@ window.siteTranslations = {
     "index.hero.title": "AI Paradigm Evolution, Leading the Future",
     "index.hero.subtitle": "Explore the AI-driven future, leading paradigm shifts in learning, investment, and biomedicine.",
     "index.hero.button.learn_more": "Learn More",
-    "index.hero.button.about_us": "About   Us",
+    "index.hero.button.about_us":   "About   Us",
     "index.sections.title": "Section Overview",
     "index.sections.learning.title": "AI Learning Paradigm",
     "index.sections.learning.desc": "Revolutionize knowledge acquisition and education, creating personalized, intelligent learning experiences with AI.",
