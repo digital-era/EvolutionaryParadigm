@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-page-title="aipegtm.pageTitle"> <!-- Default lang can be zh-CN after JS runs -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="aipegtm.pageTitle">AI Paradigm Evolution GTM</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <!-- Microsoft Clarity 跟踪代码 -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rid5reer7a");
+  </script>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6f10ee37f81ce474f6bebaabad0da6d7";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+    }
+    canvas { /* p5.js canvas, if you use it for visuals */
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 10px;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 10px;
+      margin: 5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 10px;
+      margin: 5px 0;
+      text-align: center;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 5px 0;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #0088ff;
+      border-radius: 10px;
+      padding: 15px;
+      width: calc(50% - 30px);
+      box-shadow: 0 0 20px rgba(0, 136, 255, 0.5);
+      transition: transform 0.3s;
+      text-align: left;
+      box-sizing: border-box;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .logo, .robot {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .logo {
+      margin-left: 10px;
+    }
+    .robot {
+      margin-right: 10px;
+    }
+    h1 {
+      font-size: 2em;
+      text-shadow: 0 0 10px #0088ff;
+      margin: 5px 0;
+    }
+    h2 {
+      font-size: 1.2em;
+      text-shadow: 0 0 10px #0088ff;
+      margin: 5px 0;
+      text-align: center;
+    }
+    p {
+      text-shadow: 0 0 10px #0088ff;
+      margin: 5px 0;
+      font-size: 0.9em;
+    }
+    .footer p {
+      font-size: 1.2em;
+      text-shadow: 0 0 10px #0088ff;
+      margin: 5px 0;
+    }
+    a {
+      color: #0088ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .qrcode {
+      width: 80px;
+      height: 80px;
+      display: block; /* 使其成为块级元素，这样 margin: auto 能生效 */
+      margin-left: auto;  /* 左外边距自动 */
+      margin-right: auto; /* 右外边距自动 */
+      margin-bottom: 10px; /* 可以保留或调整底部外边距，给下面的文字留空间 */
+      /* margin-top: 10px; */ /* 如果二维码上方有文字，也可以加个顶部外边距 */
+    }
+
+    /* Styles for the audio player controls (高度减小) */
+    .audio-controls {
+      position: fixed; 
+      bottom: 15px;    /* 稍微调整一下位置，因为变小了 */
+      left: 15px;      
+      background: rgba(0,0,0,0.8);
+      padding: 4px 12px; /* 上下内边距减小，左右也略微调整 */
+      border-radius: 15px; /* 圆角减小 */
+      box-shadow: 0 0 10px rgba(0, 136, 255, 0.5); /* 阴影也略微减小 */
+      z-index: 100;
+      display: flex; /* 确保按钮在容器内垂直居中 (如果容器padding不为0) */
+      align-items: center;
+    }
+    .audio-controls button {
+      background-color: #0088ff;
+      color: white;
+      border: none;
+      outline: none;
+      padding: 3px 10px; /* 上下内边距减小，左右也略微调整 */
+      border-radius: 3px; /* 圆角减小 */
+      cursor: pointer;
+      font-size: 0.7em;   /* 字体大小减小 */
+      line-height: 1.2; /* 调整行高以帮助垂直居中文本 */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+    .audio-controls button:hover {
+      background-color: #0055cc;
+    }
+    /* Styles for language switcher if not in navbar */
+    .lang-switcher {
+        display: inline-block; /* Or flex, depending on layout needs */
+        /*margin-right: 10px; Example spacing */
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+    }
+    .lang-switcher button {
+        background-color: transparent;
+        color: #fff; /* Or match your nav link color */
+        border: 1px solid #fff; /* Example border */
+        padding: 5px 10px;
+        margin-right: 5px;
+        cursor: pointer;
+        border-radius: 3px;
+        font-size: 0.5em; /* Adjust as needed */
+        line-height: 0.6;
+    }
+    .lang-switcher button.active {
+        background-color: #0088ff; /* Highlight active language */
+        color: white;
+        font-weight: bold;
+    }
+    .lang-switcher button:hover:not(.active) {
+        background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+    }
+    /* Adjust if lang switcher is not in navbar */
+    .head.lang-switcher button {
+        font-size: inherit; /* Match navbar link font size */
+        /* Add other styles to match navbar items if needed */
+    }
+
+  </style>
+</head>
+<body>
+
+  <audio id="backgroundAudio" autoplay loop>
+    <!-- 确保你的音频文件路径正确 -->
+    <source src="audio/concatenated_voice_with_music.mp3" type="audio/mpeg">
+    <!-- 如果上面的 MP3 路径不正确，或者你想保留 WAV 作为备用，可以这样: -->
+    <!-- <source src="concatenated_voice_with_music.wav" type="audio/wav"> -->
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <div class="header">
+      <img src="images/logo.png" alt="AIPE Logo" class="logo">
+      <h1 data-i18n="aipegtm.header.title">AI Paradigm Evolution, Leading the Future</h1>
+      <img src="images/robot.png" alt="Robot Elf" class="robot">
+      <!-- Language switcher will be added here by i18n.js if navbar isn't found, or to navbar if found -->
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <h2 data-i18n="aipegtm.card.mission.title">Mission</h2>
+        <p data-i18n="aipegtm.card.mission.desc">Explore the AI-driven future, leading paradigm shifts in learning, investment, and biomedicine.</p>
+      </div>
+      <div class="card">
+        <h2 data-i18n="aipegtm.card.vision.title">Vision</h2>
+        <p data-i18n="aipegtm.card.vision.desc1">Revolutionize knowledge acquisition, creating personalized learning experiences with AI.</p>
+        <p data-i18n="aipegtm.card.vision.desc2">Reshape wealth management and investment decisions through AI.</p>
+        <p data-i18n="aipegtm.card.vision.desc3">Explore AI empowering health and quality of life.</p>
+      </div>
+      <div class="card">
+        <h2 data-i18n="aipegtm.card.culture.title">Culture</h2>
+        <p data-i18n="aipegtm.card.culture.desc1">Long-termism, building a belief system based on first principles.</p>
+        <p data-i18n="aipegtm.card.culture.desc2">Empower and achieve success for others and clients through AI.</p>
+        <p data-i18n="aipegtm.card.culture.desc3">Continuous learning, continuous evolution.</p>
+      </div>
+      <div class="card">
+        <h2 data-i18n="aipegtm.card.contact.title">Website & Official Account</h2>
+        <img src="images/wechatqrcode.png" data-i18n-alt="aipegtm.card.contact.qrcode.alt" alt="WeChat QR Code" class="qrcode">
+        <p><a href="https://digital-era.github.io/EvolutionaryParadigm" target="_blank" data-i18n="aipegtm.card.contact.website_link_text">AI Paradigm Evolution Website: Link</a></p>
+        <p data-i18n="aipegtm.card.contact.wechat_id">Official Account: digitconnect</p>
+      </div>
+    </div>
+    <div class="footer">
+      <p data-i18n="aipegtm.footer.text">Individuals and businesses that understand and use AI can adapt to the trends of the times.</p>
+    </div>
+  </div>
+
+  <div class="audio-controls">
+    <button id="playPauseButton" data-i18n="aipegtm.audio.play">Play</button>
+  </div>
+
+<script>
+  function setup() {
+    createCanvas(windowWidth, windowHeight);
+  }
+
+  function draw() {
+    background(0, 10); 
+  }
+
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
+
+  const audio = document.getElementById('backgroundAudio');
+  const playPauseButton = document.getElementById('playPauseButton');
+  let isPlaying = false; 
+
+  // Keys for translation
+  const playTextKey = "aipegtm.audio.play";
+  const pauseTextKey = "aipegtm.audio.pause";
+
+  // Function to update button text based on current language
+  function updateAudioButtonText() {
+    const lang = document.documentElement.lang || 'zh-CN'; // Get current language
+    const langData = window.translations && window.translations[lang.startsWith('zh') ? 'zh-CN' : 'en'];
+
+    if (langData) {
+        playPauseButton.textContent = isPlaying ? (langData[pauseTextKey] || 'Pause') : (langData[playTextKey] || 'Play');
+    } else {
+        // Fallback if translations not loaded yet or key missing
+        playPauseButton.textContent = isPlaying ? 'Pause' : 'Play';
+    }
+  }
+
+
+  audio.oncanplaythrough = () => {
+    if (!audio.paused) {
+        isPlaying = true;
+    } else {
+        isPlaying = false;
+    }
+    updateAudioButtonText();
+  };
+
+  audio.onplay = () => {
+    isPlaying = true;
+    updateAudioButtonText();
+  };
+
+  audio.onpause = () => {
+    isPlaying = false;
+    updateAudioButtonText();
+  };
+
+  audio.onended = () => {
+      if (!audio.loop) {
+        isPlaying = false;
+        updateAudioButtonText();
+      }
+  };
+
+  playPauseButton.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(_ => {}).catch(error => {
+          console.error("Audio playback failed:", error);
+        });
+      }
+    }
+  });
+
+  // Listen for language changes to update button text
+  document.addEventListener('languageChanged', updateAudioButtonText);
+
+</script>
+<!-- Cloudflare challenge script removed for brevity, assume it's still there -->
+
+<script src="locales/translations-data.js"></script>
+<script src="scripts/i18n.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93d7655aecb1bfd8',t:'MTc0Njg1ODcxMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
