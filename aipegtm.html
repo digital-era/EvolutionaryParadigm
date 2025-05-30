@@ -283,7 +283,7 @@
   // Function to update button text based on current language
   function updateAudioButtonText() {
     const lang = document.documentElement.lang || 'zh-CN'; // Get current language
-    const langData = window.translations && window.translations[lang.startsWith('zh') ? 'zh-CN' : 'en'];
+    const langData = window.siteTranslations && window.siteTranslations[lang.startsWith('zh') ? 'zh-CN' : 'en'];
 
     if (langData) {
         playPauseButton.textContent = isPlaying ? (langData[pauseTextKey] || 'Pause') : (langData[playTextKey] || 'Play');
