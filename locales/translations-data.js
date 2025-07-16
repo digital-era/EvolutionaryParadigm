@@ -114,9 +114,9 @@ window.siteTranslations = {
     "iterationpath.stages.frontier.title": "跟踪前沿",
     "iterationpath.stages.frontier.desc": "获取目标主题的最前沿信息，为以第一性原理分析问题奠定基础。通过引领者真实见解和数据，掌握最新动态。",
     "iterationpath.stages.research.title": "深入调研",
-    "iterationpath.stages.research.desc": "通过深度调研报告，全面深入理解目标主题。系统分析背景、趋势和细节，揭示问题的核心。",
+    "iterationpath.stages.research.desc": "基于第一性原理，全面深入理解目标主题。系统分析背景、趋势、架构、模块，揭示核心待验证问题。",
     "iterationpath.stages.answers.title": "追寻答案",
-    "iterationpath.stages.answers.desc": "基于第一性原理，推理和寻找答案。通过逻辑推导和跨学科洞察，解决复杂问题。",
+    "iterationpath.stages.answers.desc": "基于最新动态和事实数据，推理和寻找答案。通过逻辑推导、数据分析、跨学科关联求证，解决复杂问题。",
     "iterationpath.stages.creative.title": "内容创意",
     "iterationpath.stages.creative.desc": "在探索过程中，通过多模态内容创作（如播客、图像、视频），激发灵感，拓展创新边界。",
 
@@ -261,9 +261,9 @@ window.siteTranslations = {
     "iterationpath.stages.frontier.title": "Track Frontiers",
     "iterationpath.stages.frontier.desc": "Obtain cutting-edge information on the target topic to lay the foundation for analyzing problems from first principles. Master the latest dynamics through leaders' real insights and data.",
     "iterationpath.stages.research.title": "In-depth Research",
-    "iterationpath.stages.research.desc": "Comprehensively understand the target topic through in-depth research reports. Systematically analyze background, trends, and details to reveal the core of the problem.",
+    "iterationpath.stages.research.desc": "Comprehensive and in-depth understanding of the target topic based on the first nature principle. Systematically analyze the context, trends, architecture, and modules to reveal the core questions to be verified.",
     "iterationpath.stages.answers.title": "Seek Answers",
-    "iterationpath.stages.answers.desc": "Reason and find answers based on first principles. Solve complex problems through logical deduction and interdisciplinary insights.",
+    "iterationpath.stages.answers.desc": "Reason and find answers based on the latest developments and factual data. Solve complex problems through logical deduction, data analysis, and cross-disciplinary correlation for evidence.",
     "iterationpath.stages.creative.title": "Content Creation",
     "iterationpath.stages.creative.desc": "During exploration, inspire creativity and expand innovation boundaries through multimodal content creation (e.g., podcasts, images, videos).",
 
