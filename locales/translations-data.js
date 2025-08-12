@@ -106,9 +106,9 @@ window.siteTranslations = {
     "modal.after_follow": "关注后，点击下方链接继续访问案例。",
     "modal.visit_case_button": "访问案例",
 
-    "iterationpath.pageTitle": "迭代路径 - 进化范式",
+    "iterationpath.pageTitle": "迭代路径 - AI范式进化",
     "iterationpath.mainTitle": "迭代路径",
-    "iterationpath.nav.logo": "进化范式",
+    "iterationpath.nav.logo": "AI范式进化",
     "iterationpath.intro": "迭代路径是 AI 驱动的学习与探索的思考和行动原则，通过持续迭代形成正向循环，激发好奇心，获取深刻知识、准确答案、真相与灵感。路径包含四个关键阶段，共同构建个性化的求知旅程。迭代是持续的过程，一次迭代可涵盖一个或多个阶段，通过反复循环不断精进。",
     "iterationpath.stages.title": "迭代阶段",
     "iterationpath.stages.frontier.title": "跟踪前沿",
@@ -254,9 +254,9 @@ window.siteTranslations = {
     "modal.after_follow": "After following, click the link below to continue accessing the case.",
     "modal.visit_case_button": "Visit Case",
 
-    "iterationpath.pageTitle": "Iteration Path - Evolutionary Paradigm",
+    "iterationpath.pageTitle": "Iteration Path - AI Paradigm Evolution",
     "iterationpath.mainTitle": "Iteration Path",
-    "iterationpath.nav.logo": "Evolutionary Paradigm",
+    "iterationpath.nav.logo": "AI Paradigm Evolution",
     "iterationpath.intro": "The Iteration Path is a set of thinking and action principles for AI-driven learning and exploration. It forms a positive cycle through continuous iteration, stimulating curiosity, and acquiring profound knowledge, accurate answers, truth, and inspiration. The path includes four key stages that collectively build a personalized journey of inquiry. Iteration is a continuous process; one iteration can cover one or more stages, constantly refining through repeated cycles.",
     "iterationpath.stages.title": "Iteration Stages",
     "iterationpath.stages.frontier.title": "Track Frontiers",
