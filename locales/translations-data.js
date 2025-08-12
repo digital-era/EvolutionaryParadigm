@@ -116,7 +116,7 @@ window.siteTranslations = {
     "iterationpath.stages.research.title": "深入调研",
     "iterationpath.stages.research.desc": "基于第一性原理，全面深入理解目标主题。系统分析背景、趋势、架构、模块，揭示核心待验证问题。",
     "iterationpath.stages.answers.title": "追寻答案",
-    "iterationpath.stages.answers.desc": "基于最新动态和事实数据，推理和寻找答案。通过逻辑推导、数据分析、跨学科关联求证，解决复杂问题，进一步提出更具探索性的问题或猜想",
+    "iterationpath.stages.answers.desc": "基于最新动态和事实数据，推理和寻找答案。通过逻辑推导、数据分析、跨学科关联求证，解决复杂问题，进一步提出更具探索性的问题或猜想。",
     "iterationpath.stages.creative.title": "内容创意",
     "iterationpath.stages.creative.desc": "在探索过程中，通过多模态内容创作（如播客、图像、视频），激发灵感，拓展创新边界。",
 
