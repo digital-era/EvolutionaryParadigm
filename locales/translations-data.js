@@ -148,6 +148,7 @@ window.siteTranslations = {
     "aipegtm.audio.play": "播放",
     "aipegtm.audio.pause": "暂停"
   }, // Removed the trailing comma here for maximum compatibility, though modern JS allows it.
+ 
   "en": {
     "site.title.base": "AI Paradigm Evolution",
     "nav.logo": "AI Paradigm Evolution",
