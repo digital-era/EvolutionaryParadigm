@@ -31,6 +31,8 @@ window.siteTranslations = {
     "learning.pageTitle": "AI学习范式",
     "learning.mainTitle": "AI学习范式",
     "learning.intro": "人工智能正在重塑学习与教育的未来。我们通过具体示范案例提升好奇心，消除求知障碍，为每位学习者提供个性化的持续知识探索旅程。",
+    "learning.appLinkPrefix": "应用链接：", // 新增
+    "learning.appLinkNorthStar": "对话北极星", // 新增
     "learning.iterationPathLink": "迭代路径",
     "learning.stage.frontier": "跟踪前沿",
     "learning.stage.research": "深入调研",
@@ -57,6 +59,8 @@ window.siteTranslations = {
     "investment.pageTitle": "AI投资范式",
     "investment.mainTitle": "AI投资范式",
     "investment.intro": "人工智能正在重塑投资的未来。我们通过具体示范案例提升认知，消除投资障碍，为每位投资者提供个性化的投资探索旅程。优化投资组合，捕捉市场机遇，助力财富增长。",
+    "investment.appLinkPrefix": "应用链接：", // 新增
+    "investment.appLinkAIVibeInvest": "AI氛围投资", // 新增
     "investment.iterationPathLink": "迭代路径",
     "investment.stage.frontier": "跟踪前沿",
     "investment.stage.research": "深入调研",
@@ -179,6 +183,8 @@ window.siteTranslations = {
     "learning.pageTitle": "AI Learning Paradigm",
     "learning.mainTitle": "AI Learning Paradigm",
     "learning.intro": "Artificial intelligence is reshaping the future of learning and education. We enhance curiosity through specific demonstration cases, eliminate knowledge barriers, and provide each learner with a personalized journey of continuous knowledge exploration.",
+    "learning.appLinkPrefix": "Application Link: ", // New
+    "learning.appLinkNorthStar": "Talk with North Stars", // New
     "learning.iterationPathLink": "Iteration Path",
     "learning.stage.frontier": "Track Frontiers",
     "learning.stage.research": "In-depth Research",
@@ -205,6 +211,8 @@ window.siteTranslations = {
     "investment.pageTitle": "AI Investment Paradigm",
     "investment.mainTitle": "AI Investment Paradigm",
     "investment.intro": "Artificial intelligence is reshaping the future of investment. We enhance cognition through specific demonstration cases, eliminate investment barriers, and provide each investor with a personalized investment exploration journey. Optimize investment portfolios, capture market opportunities, and help wealth grow.",
+    "investment.appLinkPrefix": "Application Link: ", // New
+    "investment.appLinkAIVibeInvest": "AI Vibe Investment", // New
     "investment.iterationPathLink": "Iteration Path",
     "investment.stage.frontier": "Track Frontiers",
     "investment.stage.research": "In-depth Research",
