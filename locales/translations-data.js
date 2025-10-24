@@ -84,6 +84,8 @@ window.siteTranslations = {
     "biomed.pageTitle": "AI生医范式",
     "biomed.mainTitle": "AI生医范式",
     "biomed.intro": "人工智能正在重塑生物医疗的未来。我们通过前沿探索寻求数字生医新范式，为人类健康带来革命性突破。",
+    "biomed.appLinkPrefix": "应用链接：", // 新增
+    "biomed.appLinkSmartOriginBioMed": "智源生医", // 新增
     "biomed.iterationPathLink": "迭代路径",
     "biomed.stage.frontier": "跟踪前沿",
     "biomed.stage.research": "深入调研",
@@ -236,6 +238,8 @@ window.siteTranslations = {
     "biomed.pageTitle": "AI Biomed Paradigm",
     "biomed.mainTitle": "AI Biomed Paradigm",
     "biomed.intro": "Artificial intelligence is reshaping the future of biomedicine. We seek new digital biomedicine paradigms through frontier exploration, bringing revolutionary breakthroughs to human health.",
+    "biomed.appLinkPrefix": "Application Link: ", // New
+    "biomed.appLinkSmartOriginBioMed": "SmartOrigin BioMed", // New
     "biomed.iterationPathLink": "Iteration Path",
     "biomed.stage.frontier": "Track Frontiers",
     "biomed.stage.research": "In-depth Research",
