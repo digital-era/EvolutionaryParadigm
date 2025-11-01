@@ -9,7 +9,7 @@
 body {
     font-family: 'Roboto', Arial, sans-serif; /* 备用字体 */
     color: #fff;
-    background: #0d1b2a;
+    background: #0d1b2a; /* 主背景色 */
     overflow-x: hidden;
 }
 
@@ -27,7 +27,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: rgba(0, 0, 0, 0.5);
+    background: #0d1b2a; /* 修改为与body背景色相同 */
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -71,9 +71,9 @@ body {
     -webkit-background-clip: text; /* 文字填充渐变 */
     background-clip: text;
     color: transparent; /* 透明文字，显示渐变 */
-    text-shadow: 
-        0 0 5px rgba(0, 212, 255, 0.8), 
-        0 0 10px rgba(0, 212, 255, 0.6), 
+    text-shadow:
+        0 0 5px rgba(0, 212, 255, 0.8),
+        0 0 10px rgba(0, 212, 255, 0.6),
         0 0 15px rgba(204, 0, 255, 0.4); /* 多层发光阴影 */
     -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.2); /* 细微描边 */
     animation: pulse 2s infinite ease-in-out; /* 脉冲动画 */
@@ -82,15 +82,15 @@ body {
 /* 脉冲动画 */
 @keyframes pulse {
     0%, 100% {
-        text-shadow: 
-            0 0 5px rgba(0, 212, 255, 0.8), 
-            0 0 10px rgba(0, 212, 255, 0.6), 
+        text-shadow:
+            0 0 5px rgba(0, 212, 255, 0.8),
+            0 0 10px rgba(0, 212, 255, 0.6),
             0 0 15px rgba(204, 0, 255, 0.4);
     }
     50% {
-        text-shadow: 
-            0 0 8px rgba(0, 212, 255, 1), 
-            0 0 15px rgba(0, 212, 255, 0.8), 
+        text-shadow:
+            0 0 8px rgba(0, 212, 255, 1),
+            0 0 15px rgba(0, 212, 255, 0.8),
             0 0 20px rgba(204, 0, 255, 0.6);
     }
 }
@@ -184,8 +184,8 @@ body {
     transition: background 0.3s;
     text-align: center;
     // flex-grow: 1;
-    // flex-shrink: 1; 
-    // flex-basis: 0; 
+    // flex-shrink: 1;
+    // flex-basis: 0;
 }
 
 .cta-button:hover {
@@ -450,7 +450,7 @@ body {
 footer {
     text-align: left; /* 左对齐 */
     padding: 20px 50px;
-    background: rgba(0, 0, 0, 0.5);
+    background: #0d1b2a; /* 修改为与body背景色相同 */
 }
 
 /* 案例按钮（ai-learning-caselist.html） */
@@ -568,7 +568,7 @@ footer {
         font-size: 20px; /* 移动端稍减小 */
         margin-bottom: 10px;
     }
-    
+
     .nav-links {
         margin-top: 10px;
         justify-content: center; /* 导航链接居中 */
@@ -581,7 +581,7 @@ footer {
         font-size: 10px; /* 减小字体 */
         white-space: nowrap;
     }
-    
+
     .hero {
         height: auto;
         padding: 20px 20px;
@@ -601,7 +601,7 @@ footer {
     }
     .cta-button {
         padding: 12px 24px; /* 移动端减小内边距 */
-        font-size: 14px;     
+        font-size: 14px;
     }
     .sections {
         padding: 50px 20px;
