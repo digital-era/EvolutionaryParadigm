@@ -13,7 +13,7 @@ window.siteTranslations = {
     "footer.copyright": "© 2025 AI范式进化. 保留所有权利。",
 
     "index.pageTitle": "AI范式进化",
-    "index.hero.title": "AI范式进化，引领未来",
+    "index.hero.title": "AI范式进化，引领自由三重奏 （思想自由, 财富自由， 身体自由）",
     "index.hero.subtitle": "探索人工智能驱动的未来，引领学习、投资与生物医学的范式变革",
     "index.hero.button.learn_more": "了解更多",
     "index.hero.button.about_us": "关于我们",
@@ -167,7 +167,7 @@ window.siteTranslations = {
     "footer.copyright": "© 2025 AI Paradigm Evolution. All rights reserved.",
 
     "index.pageTitle": "AI Paradigm Evolution",
-    "index.hero.title": "AI Paradigm Evolution, Leading the Future",
+    "index.hero.title": "AI Paradigm Evolution, Leading the Freedom Trio (Thought Freedom, Wealth Freedom, Body Freedom)",
     "index.hero.subtitle": "Explore the AI-driven future, leading paradigm shifts in learning, investment, and biomedicine.",
     "index.hero.button.learn_more": "Learn More",
     "index.hero.button.about_us":   "About   Us",
