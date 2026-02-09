@@ -135,7 +135,7 @@ window.siteTranslations = {
     "login.signupButton": "注册",
 
     "aipegtm.pageTitle": "AI范式进化 GTM",
-    "aipegtm.header.title": "AI范式进化，引领自由三重奏 （思想自由, 财富自由， 身体自由）",
+    "aipegtm.header.title": "AI范式进化，引领自由三重奏 （思想自由, 财富自由, 身体自由）",
     "aipegtm.card.mission.title": "使命",
     "aipegtm.card.mission.desc": "探索人工智能驱动的未来，引领学习、投资与生物医学的范式变革",
     "aipegtm.card.vision.title": "愿景",
