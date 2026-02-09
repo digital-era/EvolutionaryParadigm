@@ -29,7 +29,7 @@ window.siteTranslations = {
     "index.sections.biomed.button": "探索身体自由",
 
     "learning.pageTitle": "AI学习范式",
-    "learning.mainTitle": "AI学习范式",
+    "learning.mainTitle": "AI学习范式, 通向思想自由",
     "learning.intro": "人工智能正在重塑学习与教育的未来。我们通过具体示范案例提升好奇心，消除求知障碍，为每位学习者提供个性化的持续知识探索旅程。",
     "learning.appLinkPrefix": "应用链接：", // 新增
     "learning.appLinkNorthStar": "对话北极星", // 新增
@@ -57,7 +57,7 @@ window.siteTranslations = {
     "learning_caselist.member.restricted_content": "公众号ID: digitconnect",
 
     "investment.pageTitle": "AI投资范式",
-    "investment.mainTitle": "AI投资范式",
+    "investment.mainTitle": "AI投资范式, 通向财富自由",
     "investment.intro": "人工智能正在重塑投资的未来。我们通过具体示范案例提升认知，消除投资障碍，为每位投资者提供个性化的投资探索旅程。优化投资组合，捕捉市场机遇，助力财富增长。",
     "investment.appLinkPrefix": "应用链接：", // 新增
     "investment.appLinkAIVibeInvest": "AI氛围投资", // 新增
@@ -82,7 +82,7 @@ window.siteTranslations = {
     "investment_caselist.item4.desc": "通过 AI 创作主题交流播客，为投资者拓展新型深度交流渠道。",
 
     "biomed.pageTitle": "AI生医范式",
-    "biomed.mainTitle": "AI生医范式",
+    "biomed.mainTitle": "AI生医范式, 通向身体自由",
     "biomed.intro": "人工智能正在重塑生物医疗的未来。我们通过前沿探索寻求数字生医新范式，为人类健康带来革命性突破。",
     "biomed.appLinkPrefix": "应用链接：", // 新增
     "biomed.appLinkSmartOriginBioMed": "智源生医", // 新增
@@ -183,7 +183,7 @@ window.siteTranslations = {
     "index.sections.biomed.button": "Explore Body Freedom",
 
     "learning.pageTitle": "AI Learning Paradigm",
-    "learning.mainTitle": "AI Learning Paradigm",
+    "learning.mainTitle": "AI Learning Paradigm， Leading to Thought Freedom",
     "learning.intro": "Artificial intelligence is reshaping the future of learning and education. We enhance curiosity through specific demonstration cases, eliminate knowledge barriers, and provide each learner with a personalized journey of continuous knowledge exploration.",
     "learning.appLinkPrefix": "Application Link: ", // New
     "learning.appLinkNorthStar": "Talk with North Stars", // New
@@ -211,7 +211,7 @@ window.siteTranslations = {
     "learning_caselist.member.restricted_content": "Official Account ID: digitconnect",
 
     "investment.pageTitle": "AI Investment Paradigm",
-    "investment.mainTitle": "AI Investment Paradigm",
+    "investment.mainTitle": "AI Investment Paradigm, Leading to Wealth Freedom",
     "investment.intro": "Artificial intelligence is reshaping the future of investment. We enhance cognition through specific demonstration cases, eliminate investment barriers, and provide each investor with a personalized investment exploration journey. Optimize investment portfolios, capture market opportunities, and help wealth grow.",
     "investment.appLinkPrefix": "Application Link: ", // New
     "investment.appLinkAIVibeInvest": "AI Vibe Investment", // New
@@ -236,7 +236,7 @@ window.siteTranslations = {
     "investment_caselist.item4.desc": "Expand new deep communication channels for investors through AI-created themed podcasts.",
 
     "biomed.pageTitle": "AI Biomed Paradigm",
-    "biomed.mainTitle": "AI Biomed Paradigm",
+    "biomed.mainTitle": "AI Biomed Paradigm, Leading to Body Freedom",
     "biomed.intro": "Artificial intelligence is reshaping the future of biomedicine. We seek new digital biomedicine paradigms through frontier exploration, bringing revolutionary breakthroughs to human health.",
     "biomed.appLinkPrefix": "Application Link: ", // New
     "biomed.appLinkSmartOriginBioMed": "SmartOrigin BioMed", // New
