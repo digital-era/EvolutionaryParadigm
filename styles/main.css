@@ -558,17 +558,12 @@ footer {
     color: #00d4ff;
 }
 
-.image-wrapper {
-    width: 100%;          /* Full width adaptation to parent container */
-    margin: 0 auto;       /* Centers the wrapper horizontally */
-    overflow: hidden;     /* Prevents content overflow from disrupting layout */
-    /* Optional: Minimum height for space reservation if needed */
-    min-height: 300px;
-}
-
 .responsive-image {
-    height: auto;         /* Maintains aspect ratio */
-    display: block;       /* Ensures block-level behavior to avoid inline gaps */
+    max-width: 100%;  /* Scales down to fit the viewport */
+    width: auto;      /* Allows natural width adjustment */
+}
+.image-wrapper {
+    max-width: 100%;  /* Constrains wrapper to prevent menu shifts */
 }
 
 /* 响应式设计 */
@@ -685,6 +680,7 @@ footer {
     }
     
 }
+
 
 
 
