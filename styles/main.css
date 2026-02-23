@@ -558,6 +558,20 @@ footer {
     color: #00d4ff;
 }
 
+.image-wrapper {
+    width: 100%;          /* Ensures the wrapper spans the full available width */
+    max-width: 500px;     /* Caps at your desired maximum, preventing excessive expansion */
+    margin: 0 auto;       /* Centers the image if needed, without shifting siblings */
+    /* Optional: Add min-height if space reservation is required post-commenting */
+    min-height: 300px;    /* Approximate original section height; adjust as necessary */
+}
+
+.responsive-image {
+    max-width: 100%;      /* Allows scaling down on smaller viewports */
+    height: auto;         /* Preserves aspect ratio */
+    display: block;       /* Eliminates inline spacing artifacts */
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .navbar {
@@ -662,4 +676,5 @@ footer {
         padding: 20px;
     }
 }
+
 
