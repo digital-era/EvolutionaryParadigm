@@ -559,17 +559,16 @@ footer {
 }
 
 .image-wrapper {
-    width: 100%;          /* Ensures the wrapper spans the full available width */
-    max-width: 500px;     /* Caps at your desired maximum, preventing excessive expansion */
-    margin: 0 auto;       /* Centers the image if needed, without shifting siblings */
-    /* Optional: Add min-height if space reservation is required post-commenting */
-    min-height: 300px;    /* Approximate original section height; adjust as necessary */
+    width: 100%;          /* Full width adaptation to parent container */
+    margin: 0 auto;       /* Centers the wrapper horizontally */
+    overflow: hidden;     /* Prevents content overflow from disrupting layout */
+    /* Optional: Minimum height for space reservation if needed */
+    min-height: 300px;
 }
 
 .responsive-image {
-    max-width: 100%;      /* Allows scaling down on smaller viewports */
-    height: auto;         /* Preserves aspect ratio */
-    display: block;       /* Eliminates inline spacing artifacts */
+    height: auto;         /* Maintains aspect ratio */
+    display: block;       /* Ensures block-level behavior to avoid inline gaps */
 }
 
 /* 响应式设计 */
@@ -672,9 +671,20 @@ footer {
         font-size: 14px;
         padding: 8px 16px;
     }
+    
+    .responsive-image {
+        max-width: 100%;  /* Scales down to fit the viewport */
+        width: auto;      /* Allows natural width adjustment */
+    }
+    .image-wrapper {
+        max-width: 100%;  /* Constrains wrapper to prevent menu shifts */
+    }
+    
     footer {
         padding: 20px;
     }
+    
 }
+
 
 
