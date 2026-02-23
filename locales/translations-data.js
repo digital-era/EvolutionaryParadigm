@@ -19,18 +19,18 @@ window.siteTranslations = {
     "index.hero.button.about_us": "关于我们",
     "index.sections.title": "版块概览",
     "index.sections.learning.title": "AI学习范式",
-    "index.sections.learning.desc": "革新知识获取与教育，利用AI打造个性化、智能化学习体验。",
+    "index.sections.learning.desc": "革新知识获取，重塑思想。",
     "index.sections.learning.button": "探索思想自由",
     "index.sections.investment.title": "AI投资范式",
-    "index.sections.investment.desc": "通过认知提升和智能驱动，重塑财富管理与投资决策。",
+    "index.sections.investment.desc": "重塑财富管理与投资决策。",
     "index.sections.investment.button": "探索财富自由",
     "index.sections.biomed.title": "AI生医范式",
-    "index.sections.biomed.desc": "探索生物技术和精准医疗，AI赋能健康与生命质量。",
-    "index.sections.biomed.button": "探索身体自由",
+    "index.sections.biomed.desc": "AI赋能健康与生命质量。",
+    "index.sections.biomed.button": "探索身心自由",
 
     "learning.pageTitle": "AI学习范式",
     "learning.mainTitle": "AI学习范式, 通向思想自由",
-    "learning.intro": "人工智能正在重塑学习与教育的未来。我们通过具体示范案例提升好奇心，消除求知障碍，为每位学习者提供个性化的持续知识探索旅程。",
+    "learning.intro": "以AI原生智慧，书写思想旋律，点燃探索火花，让深度对话触手可及。",
     "learning.appLinkPrefix": "应用链接：", // 新增
     "learning.appLinkNorthStar": "对话北极星", // 新增
     "learning.iterationPathLink": "迭代路径",
@@ -58,7 +58,7 @@ window.siteTranslations = {
 
     "investment.pageTitle": "AI投资范式",
     "investment.mainTitle": "AI投资范式, 通向财富自由",
-    "investment.intro": "人工智能正在重塑投资的未来。我们通过具体示范案例提升认知，消除投资障碍，为每位投资者提供个性化的投资探索旅程。优化投资组合，捕捉市场机遇，助力财富增长。",
+    "investment.intro": "以AI原生智慧，护卫人文和财富，在传统投资荒原上，重燃文艺复兴的篝火，书写市场旋律。",
     "investment.appLinkPrefix": "应用链接：", // 新增
     "investment.appLinkAIVibeInvest": "AI氛围投资", // 新增
     "investment.iterationPathLink": "迭代路径",
@@ -82,8 +82,8 @@ window.siteTranslations = {
     "investment_caselist.item4.desc": "通过 AI 创作主题交流播客，为投资者拓展新型深度交流渠道。",
 
     "biomed.pageTitle": "AI生医范式",
-    "biomed.mainTitle": "AI生医范式, 通向身体自由",
-    "biomed.intro": "人工智能正在重塑生物医疗的未来。我们通过前沿探索寻求数字生医新范式，为人类健康带来革命性突破。",
+    "biomed.mainTitle": "AI生医范式, 通向身心自由",
+    "biomed.intro": "以AI原生智慧，探索健康旋律，解决人间疾苦。",
     "biomed.appLinkPrefix": "应用链接：", // 新增
     "biomed.appLinkSmartOriginBioMed": "智源生医", // 新增
     "biomed.iterationPathLink": "迭代路径",
@@ -173,18 +173,18 @@ window.siteTranslations = {
     "index.hero.button.about_us":   "About   Us",
     "index.sections.title": "Section Overview",
     "index.sections.learning.title": "AI Learning Paradigm",
-    "index.sections.learning.desc": "Revolutionize knowledge acquisition and education, creating personalized, intelligent learning experiences with AI.",
+    "index.sections.learning.desc": "Revolutionize knowledge acquisition, reshape thought.",
     "index.sections.learning.button": "Explore Thought Freedom",
     "index.sections.investment.title": "AI Investment Paradigm",
-    "index.sections.investment.desc": "Reshape wealth management and investment decisions through cognitive enhancement and intelligent drive.",
+    "index.sections.investment.desc": "Reshape wealth management and investment decisions.",
     "index.sections.investment.button": "Explore Wealth Freedom",
     "index.sections.biomed.title": "AI Biomed Paradigm",
-    "index.sections.biomed.desc": "Explore biotechnology and precision medicine, AI empowering health and quality of life.",
+    "index.sections.biomed.desc": "AI empowering health and quality of life.",
     "index.sections.biomed.button": "Explore Body Freedom",
 
     "learning.pageTitle": "AI Learning Paradigm",
     "learning.mainTitle": "AI Learning Paradigm， Leading to Thought Freedom",
-    "learning.intro": "Artificial intelligence is reshaping the future of learning and education. We enhance curiosity through specific demonstration cases, eliminate knowledge barriers, and provide each learner with a personalized journey of continuous knowledge exploration.",
+    "learning.intro": "Compose the melody of thought, ignite the spark of exploration with AI-native wisdom, Bring deep conversations to your fingertips.",
     "learning.appLinkPrefix": "Application Link: ", // New
     "learning.appLinkNorthStar": "Talk with North Stars", // New
     "learning.iterationPathLink": "Iteration Path",
@@ -212,7 +212,7 @@ window.siteTranslations = {
 
     "investment.pageTitle": "AI Investment Paradigm",
     "investment.mainTitle": "AI Investment Paradigm, Leading to Wealth Freedom",
-    "investment.intro": "Artificial intelligence is reshaping the future of investment. We enhance cognition through specific demonstration cases, eliminate investment barriers, and provide each investor with a personalized investment exploration journey. Optimize investment portfolios, capture market opportunities, and help wealth grow.",
+    "investment.intro": "With AI-native wisdom, we safeguard humanity and wealth. Amidst the wasteland of traditional investment, we reignite the bonfire of the Renaissance and compose the melody of the markets.",
     "investment.appLinkPrefix": "Application Link: ", // New
     "investment.appLinkAIVibeInvest": "AI Vibe Investment", // New
     "investment.iterationPathLink": "Iteration Path",
@@ -236,8 +236,8 @@ window.siteTranslations = {
     "investment_caselist.item4.desc": "Expand new deep communication channels for investors through AI-created themed podcasts.",
 
     "biomed.pageTitle": "AI Biomed Paradigm",
-    "biomed.mainTitle": "AI Biomed Paradigm, Leading to Body Freedom",
-    "biomed.intro": "Artificial intelligence is reshaping the future of biomedicine. We seek new digital biomedicine paradigms through frontier exploration, bringing revolutionary breakthroughs to human health.",
+    "biomed.mainTitle": "AI Biomed Paradigm, Leading to Body and Mental Freedom",
+    "biomed.intro": "Explore the melody of health with AI-native intelligence, and to alleviate human suffering.",
     "biomed.appLinkPrefix": "Application Link: ", // New
     "biomed.appLinkSmartOriginBioMed": "SmartOrigin BioMed", // New
     "biomed.iterationPathLink": "Iteration Path",
