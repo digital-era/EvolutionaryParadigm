@@ -135,7 +135,7 @@ window.siteTranslations = {
     "login.signupButton": "注册",
 
     "aipegtm.pageTitle": "AI范式进化 GTM",
-    "aipegtm.header.title": "AI范式进化，引领自由三重奏 （思想, 财富, 身体）",
+    "aipegtm.header.title": "AI范式进化，引领自由三重奏 （思想, 财富, 身心）",
     "aipegtm.card.mission.title": "使命",
     "aipegtm.card.mission.desc": "探索人工智能驱动的未来，引领学习、投资与生物医学的范式变革",
     "aipegtm.card.vision.title": "愿景",
@@ -289,7 +289,7 @@ window.siteTranslations = {
     "login.signupButton": "Sign Up",
 
     "aipegtm.pageTitle": "AI Paradigm Evolution GTM",
-    "aipegtm.header.title": "AI Paradigm Evolution, Leading the Freedom Trio (Thought, Wealth, Body)",
+    "aipegtm.header.title": "AI Paradigm Evolution, Leading the Freedom Trio (Thought, Wealth, Body&Mental)",
     "aipegtm.card.mission.title": "Mission",
     "aipegtm.card.mission.desc": "Explore the AI-driven future, leading paradigm shifts in learning, investment, and biomedicine.",
     "aipegtm.card.vision.title": "Vision",
