@@ -152,7 +152,9 @@ window.siteTranslations = {
     "aipegtm.card.contact.qrcode.alt": "微信公众号二维码",
     "aipegtm.footer.text": "理解AI、使用AI的个人和企业才能顺应时代趋势",
     "aipegtm.audio.play": "播放",
-    "aipegtm.audio.pause": "暂停"
+    "aipegtm.audio.pause": "暂停",
+
+     "index.blueprint.image": "images/AI范式进化解决方案蓝图.jpg" // 中文版图片路径
   }, // Removed the trailing comma here for maximum compatibility, though modern JS allows it.
  
   "en": {
@@ -306,6 +308,8 @@ window.siteTranslations = {
     "aipegtm.card.contact.qrcode.alt": "WeChat QR Code",
     "aipegtm.footer.text": "Individuals and businesses that understand and use AI can adapt to the trends of the times.",
     "aipegtm.audio.play": "Play",
-    "aipegtm.audio.pause": "Pause"
+    "aipegtm.audio.pause": "Pause",
+
+    "index.blueprint.image": "images/AIPE Solution BluePrint.jpg" // 中文版图片路径
   }
 };
