@@ -76,19 +76,20 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('img[data-i18n-img]').forEach(img => {
             const key = img.getAttribute('data-i18n-img');
             
-            // 从你的数据中获取新图片的路径
-            // 注意：这里的 translationsData[lang][key] 请替换为你实际获取翻译变量的方法
-            const newSrc = translationsData[currentLang][key]; 
+            // 【修复点 1】：直接使用当前函数的 langData 获取对应语言的图片路径
+            const newSrc = langData[key]; 
         
-            if (newSrc && img.src.indexOf(newSrc) === -1) {
-                // 第一步：先让旧图片淡出 (由于 CSS 中设置了 transition: opacity 0.4s)
+            // 【修复点 2】：使用 endsWith 比较路径更安全，因为 img.src 可能会返回带 http 的绝对路径
+            if (newSrc && !img.src.endsWith(newSrc)) {
+                // 第一步：先让旧图片淡出 (由于 CSS 中设置了 transition)
                 img.style.opacity = 0;
                 
                 // 第二步：等待淡出结束后，替换 src，再淡入新图片
                 setTimeout(() => {
+                    // 更新图片路径
                     img.src = newSrc;
                     
-                    // 确保图片加载完成后再显示
+                    // 确保新图片加载完成后再显示，避免白屏闪烁
                     img.onload = () => {
                         img.style.opacity = 1;
                     };
