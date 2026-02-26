@@ -566,6 +566,77 @@ footer {
     max-width: 100%;  /* Constrains wrapper to prevent menu shifts */
 }
 
+/* =========================================
+   蓝图展示区 (AIPE Blueprint Section) - 边缘羽化融合
+   ========================================= */
+.blueprint-section {
+    width: 100%;
+    padding: 20px 0 80px 0; /* 调整与上方 Hero 和下方卡片的间距 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2; /* 确保显示在底层粒子特效之上 */
+}
+
+.blueprint-container {
+    width: 100%;
+    max-width: 1100px; /* 控制蓝图最大宽度，大屏下更精致 */
+    margin: 0 auto;
+    padding: 0 20px;
+    
+    /* 🌟 核心 CSS 魔法：边缘径向羽化融合 🌟 */
+    /* 保持中心 75% 区域完全清晰，只将最外侧 25% 的四个直角边缘逐渐透明化 */
+    -webkit-mask-image: radial-gradient(ellipse 95% 95% at 50% 50%, black 75%, transparent 100%);
+    mask-image: radial-gradient(ellipse 95% 95% at 50% 50%, black 75%, transparent 100%);
+
+    /* 增加悬浮呼吸动画，赋予生命力 */
+    animation: floatBlueprint 8s ease-in-out infinite;
+}
+
+.blueprint-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* 增加轻微的发光阴影和对比度，配合暗黑背景 */
+    filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.1)) contrast(1.05);
+    /* 增加 opacity 过渡，用于中英文优雅切换时无闪烁 */
+    transition: filter 0.5s ease, transform 0.8s ease, opacity 0.4s ease-in-out;
+}
+
+/* 鼠标悬停微交互：引擎亮起，微微放大贴近用户 */
+.blueprint-container:hover .blueprint-img {
+    filter: drop-shadow(0 0 50px rgba(0, 212, 255, 0.3)) contrast(1.15) brightness(1.05);
+    transform: scale(1.02);
+}
+
+/* 缓慢的上下悬浮动画 */
+@keyframes floatBlueprint {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+
+/* 移动端响应式覆盖 (需合并到你现有的 @media (max-width: 768px) 中，或直接贴在最底下) */
+@media (max-width: 768px) {
+    .blueprint-section {
+        padding: 0 0 40px 0;
+    }
+    .blueprint-container {
+        padding: 0 10px;
+        /* 移动端屏幕小，减弱羽化范围，确保边缘文字不被遮挡 */
+        -webkit-mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 85%, transparent 100%);
+        mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 85%, transparent 100%);
+        animation: floatBlueprintMobile 6s ease-in-out infinite; /* 移动端减小浮动幅度 */
+    }
+    @keyframes floatBlueprintMobile {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+        100% { transform: translateY(0px); }
+    }
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .navbar {
@@ -680,6 +751,7 @@ footer {
     }
     
 }
+
 
 
 
