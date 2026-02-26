@@ -54,23 +54,16 @@
                 <li class="detail-card"><a href="ai-learning-caselist.html" data-i18n="learning.stage.creative">内容创意</a></li>
             </ul>
             -->
-            <!--  修改后的图片展示区 (带有聚光灯聚焦效果)  -->
-            <div class="image-wrapper blueprint-spotlight-wrapper">
-                <!-- 1. 底层高亮图片 (复用首页蓝图路径，利用 i18n 动态切换) -->
-                <!-- 注意：这里的 data-i18n-img 键名和你在首页用的是同一个 -->
-                <img id="learning-blueprint-img"
-                     src="images/AI范式进化解决方案蓝图.jpg" 
-                     data-i18n-img="index.blueprint.image" 
-                     alt="AI学习范式：思想自由与对话北极星" 
-                     class="responsive-image base-image">
-                
-                <!-- 2. 聚光灯遮罩层：覆盖全局使其变暗，并在左侧挖空 -->
-                <div class="spotlight-overlay"></div>
-                
-                <!-- 3. 可选装饰：聚焦准星或边框 (提升科幻感) -->
-                <div class="focus-ring"></div>
+            <!--  AI学习范式 HUD  -->
+            <div class="image-wrapper blueprint-hud-wrapper">
+                <img id="learning-blueprint-img" src="images/AI范式进化解决方案蓝图.jpg" data-i18n-img="index.blueprint.image" alt="AI学习范式" class="responsive-image base-image">
+                <!-- 注意这里叠加了 target-learning 控制位置 -->
+                <div class="hud-target-box target-learning">
+                    <div class="corner top-left"></div><div class="corner top-right"></div>
+                    <div class="corner bottom-left"></div><div class="corner bottom-right"></div>
+                    <div class="scanning-line"></div>
+                </div>
             </div>
-            <!--  修改结束  -->
         </div>
     </section>
     
@@ -84,6 +77,7 @@
 </body>
 
 </html>
+
 
 
 
