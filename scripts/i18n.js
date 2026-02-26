@@ -71,6 +71,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // 在i18n 更新函数内部添加以下代码：
+        // ===  新增：处理图片的优雅切换逻辑  ===
+        document.querySelectorAll('img[data-i18n-img]').forEach(img => {
+            const key = img.getAttribute('data-i18n-img');
+            
+            // 从你的数据中获取新图片的路径
+            // 注意：这里的 translationsData[lang][key] 请替换为你实际获取翻译变量的方法
+            const newSrc = translationsData[currentLang][key]; 
+        
+            if (newSrc && img.src.indexOf(newSrc) === -1) {
+                // 第一步：先让旧图片淡出 (由于 CSS 中设置了 transition: opacity 0.4s)
+                img.style.opacity = 0;
+                
+                // 第二步：等待淡出结束后，替换 src，再淡入新图片
+                setTimeout(() => {
+                    img.src = newSrc;
+                    
+                    // 确保图片加载完成后再显示
+                    img.onload = () => {
+                        img.style.opacity = 1;
+                    };
+                }, 400); // 这里的 400 对应 CSS 中 opacity 的过渡时间 0.4s
+            }
+        });
+        // ===  新增结束  ===
+
         const pageTitleKey = document.documentElement.getAttribute('data-i18n-page-title');
         if (pageTitleKey && langData[pageTitleKey] !== undefined) {
             document.title = langData[pageTitleKey];
