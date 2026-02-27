@@ -173,6 +173,7 @@ body {
 }
 
 .cta-button {
+    display: inline-block; /* 让元素具备块级特性，撑开宽高，防止背景撕裂 */
     padding: 15px 30px;
     background: #00d4ff;
     color: #0d1b2a;
@@ -183,9 +184,9 @@ body {
     font-weight: bold;
     transition: background 0.3s;
     text-align: center;
-    // flex-grow: 1;
-    // flex-shrink: 1;
-    // flex-basis: 0;
+    //flex-grow: 1;
+    //flex-shrink: 1;
+    //flex-basis: 0;
 }
 
 .cta-button:hover {
@@ -710,7 +711,7 @@ footer {
     top: 70%; /* 靠下面 */
     left: 43%; /* 居中偏左一点，对齐人体图标 */
     width: 38%; 
-    height: 38%;
+    height: 39%;
 }
 
 /* 移动端适配：屏幕变窄时，框需要稍微变宽一点以包住文字 */
@@ -856,6 +857,7 @@ footer {
     }
     
 }
+
 
 
 
