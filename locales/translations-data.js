@@ -180,7 +180,7 @@ window.siteTranslations = {
     "index.sections.investment.title": "AI Investment Paradigm",
     "index.sections.investment.desc": "Reshape wealth management and investment decisions with AI",
     "index.sections.investment.button": "Explore Wealth Freedom",
-    "index.sections.biomed.title": "AI Health     Paradigm",
+    "index.sections.biomed.title": "AI Health\n Paradigm",
     "index.sections.biomed.desc": "AI empowering health and quality of life",
     "index.sections.biomed.button": "Explore Body&Mind Freedom",
 
