@@ -210,6 +210,8 @@
 </head>
 <body>
 
+  <!-- 以下为背景音乐播放功能，已注释掉 -->
+  <!--
   <audio id="backgroundAudio" autoplay loop>
     <!-- 确保你的音频文件路径正确 -->
     <source src="audio/concatenated_voice_with_music.mp3" type="audio/mpeg">
@@ -217,7 +219,8 @@
     <!-- <source src="concatenated_voice_with_music.wav" type="audio/wav"> -->
     Your browser does not support the audio element.
   </audio>
-
+  -->
+  
   <div class="container">
     <div class="header">
       <img src="images/logo.png" alt="AIPE Logo" class="logo">
@@ -255,9 +258,12 @@
 
   </div>
 
+  <!-- 以下为背景音乐播放功能，已注释掉 -->
+  <!--
   <div class="audio-controls">
     <button id="playPauseButton" data-i18n="aipegtm.audio.play">Play</button>
   </div>
+  -->
 
 <script>
   function setup() {
@@ -272,10 +278,16 @@
     resizeCanvas(windowWidth, windowHeight);
   }
 
+  /* ────────────────────────────────────────────────
+   背景音频播放及控制逻辑 - 已全部注释掉
+   如需恢复，直接删除本段注释即可
+───────────────────────────────────────────────── */
+  /*
   const audio = document.getElementById('backgroundAudio');
   const playPauseButton = document.getElementById('playPauseButton');
   let isPlaying = false; 
 
+  
   // Keys for translation
   const playTextKey = "aipegtm.audio.play";
   const pauseTextKey = "aipegtm.audio.pause";
@@ -335,7 +347,8 @@
 
   // Listen for language changes to update button text
   document.addEventListener('languageChanged', updateAudioButtonText);
-
+  *背景音频播放及控制逻辑 - 已全部注释掉*/
+  
 </script>
 <!-- Cloudflare challenge script removed for brevity, assume it's still there -->
 
