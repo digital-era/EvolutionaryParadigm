@@ -173,8 +173,11 @@ body {
 }
 
 .cta-button {
-    display: inline-block; /* 让元素具备块级特性，撑开宽高，防止背景撕裂 */
-    white-space: nowrap;   /* 强制文字不换行，保持按钮为长条形（可选，但在按钮中很常用） */
+    /* --- 核心修复 --- */
+    display: inline-block; /* 必须：让按钮变成块级盒子，修复背景撕裂 */
+    white-space: nowrap;   /* 建议：强制文字不换行，保持按钮整洁 */
+    /* ---------------- */
+
     padding: 15px 30px;
     background: #00d4ff;
     color: #0d1b2a;
@@ -185,9 +188,11 @@ body {
     font-weight: bold;
     transition: background 0.3s;
     text-align: center;
-    //flex-grow: 1;
-    //flex-shrink: 1;
-    //flex-basis: 0;
+    
+    /* 注意：CSS中删除代码请使用这种注释格式，不要用双斜杠 // */
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* flex-basis: 0; */
 }
 
 .cta-button:hover {
@@ -858,6 +863,7 @@ footer {
     }
     
 }
+
 
 
 
