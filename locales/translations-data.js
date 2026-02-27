@@ -150,7 +150,7 @@ window.siteTranslations = {
     "aipegtm.card.contact.website_link_text": "AI范式进化网站：网址链接",
     "aipegtm.card.contact.wechat_id": "公众号：digitconnect",
     "aipegtm.card.contact.qrcode.alt": "微信公众号二维码",
-    "aipegtm.footer.text": "在海量信息洪流的喧嚣世界，重燃人文与文艺复兴的篝火，奏响个人、企业、时代的自由旋律",
+    "aipegtm.footer.text": "在信息洪流的喧嚣世界，重燃人文与文艺复兴的篝火，奏响个人、企业、时代的自由旋律",
     "aipegtm.audio.play": "播放",
     "aipegtm.audio.pause": "暂停",
 
