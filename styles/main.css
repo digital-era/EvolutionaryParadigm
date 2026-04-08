@@ -95,6 +95,22 @@ body {
     }
 }
 
+/* --- Logo Styles --- */
+.logo-container {
+  position: absolute;
+  top: 1px; /* 调整 Logo 的 top 值从20-》1，使其与按钮的底部对齐 */
+  left: 20px; /* 左侧距离 */
+  z-index: 20; /* 确保在其他内容之上 */
+  display: flex; /* 让logo内部的img居中 */
+  align-items: center; 
+  justify-content: center;
+}
+.logo-container img {
+  height: 70px;
+  width: auto;
+  border-radius: 5px;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -758,6 +774,13 @@ footer {
     .logo {
         font-size: 20px; /* 移动端稍减小 */
         margin-bottom: 10px;
+    }
+    .logo-container {
+          top: 15px;
+          left: 15px;
+      }
+    .logo-container img {
+          height: 50px;
     }
 
     .nav-links {
