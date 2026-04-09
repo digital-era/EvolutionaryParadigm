@@ -106,7 +106,7 @@ body {
 
 /* --- 图片基础样式 --- */
 .logo-container img {
-    height: 100px; /* <--- 电脑端大小：从 70px 放大到了 100px，若还小可改成 120px 或更大 */
+    height: 120px; /* <--- 电脑端大小：从 70px 放大到了 120px，若还小可改成更大 */
     width: auto;
     display: block; 
 }
@@ -781,7 +781,7 @@ footer {
     }
 
     .logo-container img {
-        height: 75px; /* <--- 手机端大小：从 50px 放大到了 75px */
+        height: 100px; /* <--- 手机端大小：从 50px 放大到了 10px */
     }
 
     .nav-links {
