@@ -139,9 +139,9 @@ body {
                 drop-shadow(0 0 20px rgba(204, 0, 255, 0.3));
     }
     66.66% {
-        /* 颜色 3：金黄色 (对应水平环) */
-        filter: drop-shadow(0 0 6px rgba(255, 180, 50, 0.8))
-                drop-shadow(0 0 20px rgba(255, 180, 50, 0.3));
+        /* 颜色 3：香槟色 (对应水平环) */
+        filter: drop-shadow(0 0 6px rgba(247, 231, 206, 0.8))
+                drop-shadow(0 0 20px rgba(247, 231, 206, 0.3));
     }
     100% {
         /* 完美闭环：平滑过渡回青蓝色 */
