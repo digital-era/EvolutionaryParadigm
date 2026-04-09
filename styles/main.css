@@ -97,6 +97,7 @@ body {
 
 /* --- Logo Styles --- */
 /* --- Logo 容器 --- */
+/* --- Logo 容器 --- */
 .logo-container {
     display: inline-flex;
     align-items: center;
@@ -105,9 +106,9 @@ body {
 
 /* --- 图片基础样式 --- */
 .logo-container img {
-    height: 70px;
+    height: 100px; /* <--- 电脑端大小：从 70px 放大到了 100px，若还小可改成 120px 或更大 */
     width: auto;
-    display: block; /* 消除图片底部的默认微小间隙 */
+    display: block; 
 }
 
 .nav-links {
@@ -780,7 +781,7 @@ footer {
     }
 
     .logo-container img {
-        height: 50px;
+        height: 75px; /* <--- 手机端大小：从 50px 放大到了 75px */
     }
 
     .nav-links {
