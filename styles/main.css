@@ -96,14 +96,12 @@ body {
 }
 
 /* --- Logo Styles --- */
-/* --- Logo 容器基础样式 --- */
+/* --- Logo 容器 --- */
 .logo-container {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    /* 将发光和呼吸动画移到容器上，性能更好且效果更自然 */
-    animation: pulse-glow 4s infinite ease-in-out;
 }
 
 /* --- 图片核心样式 --- */
@@ -111,26 +109,45 @@ body {
     height: 70px;
     width: auto;
     
-    /* 核心修改 1：删除 border-radius，打破盒子感 */
-    /* border-radius: 5px; */ 
-
-    /* 核心修改 2：如果你的原图带有黑底，加上这行代码！
-       它可以把黑底变透明，完美融入深色网页背景 */
+    /* 核心过滤：去掉黑底，让发光完全贴合三个环（仅适用深色网页背景） */
     mix-blend-mode: screen; 
-
-    /* 核心修改 3：克制的滤镜。
-       原图已经有很好的光影，过度增加对比度会显得廉价。
-       只保留一点基础的提亮和极其轻微的轮廓光即可 */
-    filter: brightness(1.05) drop-shadow(0 0 5px rgba(0, 212, 255, 0.3));
     
-    /* 增加微小的悬浮交互，体现专业质感 */
-    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.4s ease;
+    /* 调用三色等宽循环动画：6秒一个完整周期，极其平滑 */
+    animation: tri-color-orbit 6s infinite ease-in-out;
+    
+    /* 添加基础物理交互：轻微悬浮放大 */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* 鼠标悬浮时的专业交互：轻微放大 + 辉光增强 */
+/* 鼠标悬浮时：稍微放大，但保持辉光动画继续律动 */
 .logo-container:hover img {
     transform: scale(1.05);
-    filter: brightness(1.2) drop-shadow(0 0 15px rgba(0, 212, 255, 0.8));
+}
+
+
+/* --- 专业级：三色等权重循环辉光动画 --- */
+@keyframes tri-color-orbit {
+    0% {
+        /* 颜色 1：青蓝色 (对应左上至右下环) */
+        /* 第一层模拟光轨实体，第二层模拟环境散景扩散光 */
+        filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.8))
+                drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+    }
+    33.33% {
+        /* 颜色 2：紫红色 (对应左下至右上环) */
+        filter: drop-shadow(0 0 6px rgba(204, 0, 255, 0.8))
+                drop-shadow(0 0 20px rgba(204, 0, 255, 0.3));
+    }
+    66.66% {
+        /* 颜色 3：金黄色 (对应水平环) */
+        filter: drop-shadow(0 0 6px rgba(255, 180, 50, 0.8))
+                drop-shadow(0 0 20px rgba(255, 180, 50, 0.3));
+    }
+    100% {
+        /* 完美闭环：平滑过渡回青蓝色 */
+        filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.8))
+                drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+    }
 }
 
 /* --- 高级脉冲动画 --- */
