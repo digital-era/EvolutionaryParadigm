@@ -98,71 +98,16 @@ body {
 /* --- Logo Styles --- */
 /* --- Logo 容器 --- */
 .logo-container {
-    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
-/* --- 图片核心样式 --- */
+/* --- 图片基础样式 --- */
 .logo-container img {
     height: 70px;
     width: auto;
-    
-    /* 核心过滤：去掉黑底，让发光完全贴合三个环（仅适用深色网页背景） */
-    mix-blend-mode: screen; 
-    
-    /* 调用三色等宽循环动画：6秒一个完整周期，极其平滑 */
-    animation: tri-color-orbit 6s infinite ease-in-out;
-    
-    /* 添加基础物理交互：轻微悬浮放大 */
-    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-/* 鼠标悬浮时：稍微放大，但保持辉光动画继续律动 */
-.logo-container:hover img {
-    transform: scale(1.05);
-}
-
-
-/* --- 专业级：三色等权重循环辉光动画 --- */
-@keyframes tri-color-orbit {
-    0% {
-        /* 颜色 1：青蓝色 (对应左上至右下环) */
-        /* 第一层模拟光轨实体，第二层模拟环境散景扩散光 */
-        filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.8))
-                drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
-    }
-    33.33% {
-        /* 颜色 2：紫红色 (对应左下至右上环) */
-        filter: drop-shadow(0 0 6px rgba(204, 0, 255, 0.8))
-                drop-shadow(0 0 20px rgba(204, 0, 255, 0.3));
-    }
-    66.66% {
-        /* 颜色 3：香槟色 (对应水平环) */
-        filter: drop-shadow(0 0 6px rgba(247, 231, 206, 0.8))
-                drop-shadow(0 0 20px rgba(247, 231, 206, 0.3));
-    }
-    100% {
-        /* 完美闭环：平滑过渡回青蓝色 */
-        filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.8))
-                drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
-    }
-}
-
-/* --- 高级脉冲动画 --- */
-/* 专业级的动画特点是“缓慢、克制、顺滑” */
-@keyframes pulse-glow {
-    0%, 100% {
-        /* 使用 Cyan (青色) 作为基础辉光 */
-        filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.2));
-        transform: translateY(0);
-    }
-    50% {
-        /* 融合 Purple (紫色)，并让 LOGO 有极其轻微的上下浮动（呼吸感） */
-        filter: drop-shadow(0 0 20px rgba(204, 0, 255, 0.5));
-        transform: translateY(-2px); 
-    }
+    display: block; /* 消除图片底部的默认微小间隙 */
 }
 
 .nav-links {
@@ -831,8 +776,6 @@ footer {
     }
     /* .logo-container 移动端优化（核心修改） */
     .logo-container {
-        height: 50px;
-        line-height: 50px;
         margin: 0 auto 10px auto;
     }
 
