@@ -85,13 +85,29 @@
     .card:hover {
       transform: scale(1.05);
     }
-    .logo, .robot {
+    
+    /* --- Logo 容器 --- */
+    .logo {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* --- 图片基础样式 --- */
+    .logo img {
+        height: 100px; /* <--- 电脑端大小：从 70px 放大到了 100px，若还小可改成 120px 或更大 */
+        width: auto;
+        display: block; 
+    }
+    
+    .robot {
       width: 100px;
       height: 100px;
       border-radius: 50%;
       display: inline-block;
       vertical-align: middle;
     }
+    
     .logo {
       margin-left: 10px;
     }
@@ -220,7 +236,9 @@
   
   <div class="container">
     <div class="header">
-      <img src="images/AIPELogo.png" alt="AIPE Logo" class="logo">
+      <div class="logo">
+            <img src="images/AIPELogo.png" alt="AIPE Logo">
+      </div>
       <h1 data-i18n="aipegtm.header.title">AI Paradigm Evolution, Leading the Future</h1>
       <img src="images/AIPELogo1.png" alt="Robot Elf" class="robot">
       <!-- Language switcher will be added here by i18n.js if navbar isn't found, or to navbar if found -->
