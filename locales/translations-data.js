@@ -135,7 +135,8 @@ window.siteTranslations = {
     "login.signupButton": "注册",
 
     "aipegtm.pageTitle": "AI范式进化 GTM",
-    "aipegtm.header.title": "AI范式进化，引领自由三重奏 （思想, 财富, 身心）",
+     // "aipegtm.header.title": "AI范式进化，引领自由三重奏 （思想, 财富, 身心）",
+    "aipegtm.header.title": "AI范式进化介绍",
     "aipegtm.card.mission.title": "使命",
     "aipegtm.card.mission.desc1": "在思维、投资与健康三个领域打造突破性的AI原生产品和服务。",
     "aipegtm.card.mission.desc2": "赋能用户完成从AI提效转向自由度提升的范式跃迁。",
@@ -290,7 +291,8 @@ window.siteTranslations = {
     "login.signupButton": "Sign Up",
 
     "aipegtm.pageTitle": "AI Paradigm Evolution GTM",
-    "aipegtm.header.title": "AI Paradigm Evolution, Leading the Freedom Trio (Thought, Wealth, Body&Mind)",
+    //"aipegtm.header.title": "AI Paradigm Evolution, Leading the Freedom Trio (Thought, Wealth, Body&Mind)",
+    "aipegtm.header.title": "AI Paradigm Evolution Introduction (Thought, Wealth, Body&Mind)",
     "aipegtm.card.mission.title": "Mission",
     "aipegtm.card.mission.desc1": "Create breakthrough AI-native products and services in the areas of thinking, investing, and health.",
     "aipegtm.card.mission.desc2": "Empower  user to make the paradigm leap from mere AI productivity to  expanded freedom.",
