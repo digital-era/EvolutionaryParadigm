@@ -147,6 +147,9 @@ body {
 .hero-title {
     font-family: 'Orbitron', 'Helvetica Neue', sans-serif;
     font-size: 60px;
+    /* --- 修改这里：向上调节标题位置 --- */
+    margin-top: -100px;  /* 添加负外边距，例如 -100px 会将标题向上拉 */
+    /* ---------------------------------- */
     margin-bottom: 20px;
     background: linear-gradient(
         90deg,
