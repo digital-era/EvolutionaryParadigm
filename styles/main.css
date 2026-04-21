@@ -808,7 +808,7 @@ footer {
         animation: colorWave 6s ease-in-out infinite;
     }
     .hero p {
-        font-size: 16px;
+        font-size: 14px;
     }
     .button-group {
         flex-direction: column;
