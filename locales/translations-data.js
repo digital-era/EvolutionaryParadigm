@@ -10,7 +10,7 @@ window.siteTranslations = {
     "nav.ai_biomed": "AI健康范式",
     "nav.login": "登录",
     "nav.logout": "退出",
-    "footer.copyright": "© 2025 AI范式进化. 保留所有权利。",
+    "footer.copyright": "© AI范式进化. 保留所有权利。",
 
     "index.pageTitle": "AI范式进化",
     "index.hero.title": "AI范式进化，引领自由三重奏",
@@ -166,7 +166,7 @@ window.siteTranslations = {
     "nav.ai_biomed": "AI Health",
     "nav.login": "Login",
     "nav.logout": "Logout",
-    "footer.copyright": "© 2025 AI Paradigm Evolution. All rights reserved.",
+    "footer.copyright": "© AI Paradigm Evolution. All rights reserved.",
 
     "index.pageTitle": "AI Paradigm Evolution",
     "index.hero.title": "AI Paradigm Evolution, Leading the Freedom Trio",
