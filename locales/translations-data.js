@@ -14,7 +14,7 @@ window.siteTranslations = {
 
     "index.pageTitle": "AI范式进化",
     "index.hero.title": "AI范式进化，引领自由三重奏",
-    "index.hero.subtitle": "激发潜能，通向思想自由、财富自由与身心自由的范式跃迁",
+    "index.hero.subtitle": "激发潜能，通向思想、财富与身心自由的范式跃迁",
     "index.hero.button.learn_more": "了解更多",
     "index.hero.button.about_us": "关于我们",
     "index.sections.title": "版块概览",
