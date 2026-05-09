@@ -29,8 +29,8 @@ window.siteTranslations = {
     "index.sections.biomed.button": "探索身心自由",
 
     "learning.pageTitle": "AI思维范式",
-    "learning.mainTitle": "连接人类潜能与AI智慧, 通向思想自由",
-    "learning.intro": "以AI原生智慧，书写思想旋律，点燃探索火花，让深度对话触手可及。",
+    "learning.mainTitle": "连接并激发人类潜能与AI智慧, 通向思想自由",
+    "learning.intro": "以AI原生智慧，书写思想旋律，点燃潜能火花，让深度对话触手可及。",
     "learning.appLinkPrefix": "应用链接：", // 新增
     "learning.appLinkNorthStar": "对话北极星", // 新增
     "learning.iterationPathLink": "迭代路径",
@@ -185,8 +185,8 @@ window.siteTranslations = {
     "index.sections.biomed.button": "Explore Body&Mind Freedom",
 
     "learning.pageTitle": "AI Thinking Paradigm",
-    "learning.mainTitle": "Connecting human potential and AI wisdom， leading to Thought Freedom",
-    "learning.intro": "Compose the melody of thought, ignite the spark of exploration with AI-native wisdom, Bring deep conversations to your fingertips.",
+    "learning.mainTitle": "Connecting and unlocking human potential with AI wisdom， leading to Thought Freedom",
+    "learning.intro": "Compose the melody of thought, ignite the spark of potentiality with AI-native wisdom, Bring deep conversations to your fingertips.",
     "learning.appLinkPrefix": "Application Link: ", // New
     "learning.appLinkNorthStar": "Talk with North Stars", // New
     "learning.iterationPathLink": "Iteration Path",
