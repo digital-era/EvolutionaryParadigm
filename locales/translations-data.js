@@ -297,7 +297,7 @@ window.siteTranslations = {
     "aipegtm.card.mission.desc1": "Create breakthrough AI-native products and services in the areas of thinking, investing, and health.",
     "aipegtm.card.mission.desc2": "Empower  user to make the paradigm leap from mere AI productivity to  expanded freedom.",
     "aipegtm.card.vision.title": "Vision",
-    "aipegtm.card.vision.desc": "Connect and unlock human potential with AI intelligence, helping people achieve the path  of thought, wealth, body&mind freedom.",
+    "aipegtm.card.vision.desc": "Connect and unlock human potential with AI intelligence, helping people achieve the path  to thought, wealth, body&mind freedom.",
     "aipegtm.card.culture.title": "Culture",
     "aipegtm.card.culture.desc1": "Long-termism, building a belief system based on  multi-dimensional civilization, higher-dimensional freedom framework, and first principles.",
     "aipegtm.card.culture.desc2": "Empowering customer success through AI, human touch, and relentless execution.",
