@@ -29,8 +29,8 @@ window.siteTranslations = {
     "index.sections.biomed.button": "探索身心自由",
 
     "learning.pageTitle": "AI思维范式",
-    "learning.mainTitle": "连接并激发人类潜能与AI智慧, 通向思想自由",
-    "learning.intro": "以AI原生智慧，书写思想旋律，点燃潜能火花，让深度对话触手可及。",
+    "learning.mainTitle": "连接人类潜能与AI, 通向思想自由",
+    "learning.intro": "探索思想旋律，创造智慧复利。",
     "learning.appLinkPrefix": "应用链接：", // 新增
     "learning.appLinkNorthStar": "对话北极星", // 新增
     "learning.iterationPathLink": "迭代路径",
@@ -57,8 +57,8 @@ window.siteTranslations = {
     "learning_caselist.member.restricted_content": "公众号ID: digitconnect",
 
     "investment.pageTitle": "AI投资范式",
-    "investment.mainTitle": "连接人类潜能与AI智慧, 通向财富自由",
-    "investment.intro": "以AI原生智慧，护卫人文和财富，在传统投资荒原上，重燃文艺复兴的篝火，书写市场旋律。",
+    "investment.mainTitle": "连接人类潜能与AI, 通向财富自由",
+    "investment.intro": "探索商业旋律，创造价值复利。",
     "investment.appLinkPrefix": "应用链接：", // 新增
     "investment.appLinkAIVibeInvest": "AI氛围投资", // 新增
     "investment.iterationPathLink": "迭代路径",
@@ -82,8 +82,8 @@ window.siteTranslations = {
     "investment_caselist.item4.desc": "通过 AI 创作主题交流播客，为投资者拓展新型深度交流渠道。",
 
     "biomed.pageTitle": "AI健康范式",
-    "biomed.mainTitle": "连接人类潜能与AI智慧, 通向身心自由",
-    "biomed.intro": "以AI原生智慧，探索健康旋律，解决人间疾苦。",
+    "biomed.mainTitle": "连接人类潜能与AI, 通向身心自由",
+    "biomed.intro": "探索身心旋律，创造健康复利。",
     "biomed.appLinkPrefix": "应用链接：", // 新增
     "biomed.appLinkSmartOriginBioMed": "智源生医", // 新增
     "biomed.iterationPathLink": "迭代路径",
@@ -185,8 +185,8 @@ window.siteTranslations = {
     "index.sections.biomed.button": "Explore Body&Mind Freedom",
 
     "learning.pageTitle": "AI Thinking Paradigm",
-    "learning.mainTitle": "Connecting and unlocking human potential with AI wisdom， leading to Thought Freedom",
-    "learning.intro": "Compose the melody of thought, ignite the spark of potentiality with AI-native wisdom, Bring deep conversations to your fingertips.",
+    "learning.mainTitle": "Connecting human potential with AI， leading to Thought Freedom",
+    "learning.intro": "Explore the melodies of thought and create compound returns on wisdom.",
     "learning.appLinkPrefix": "Application Link: ", // New
     "learning.appLinkNorthStar": "Talk with North Stars", // New
     "learning.iterationPathLink": "Iteration Path",
@@ -213,8 +213,8 @@ window.siteTranslations = {
     "learning_caselist.member.restricted_content": "Official Account ID: digitconnect",
 
     "investment.pageTitle": "AI Investment Paradigm",
-    "investment.mainTitle": "Connecting human potential and AI wisdom, leading to Wealth Freedom",
-    "investment.intro": "With AI-native wisdom, we safeguard humanity and wealth. Amidst the wasteland of traditional investment, we reignite the bonfire of the Renaissance and compose the melody of the markets.",
+    "investment.mainTitle": "Connecting human potential and AI, leading to Wealth Freedom",
+    "investment.intro": "Explore the melodies of business; create the compounding of value.",
     "investment.appLinkPrefix": "Application Link: ", // New
     "investment.appLinkAIVibeInvest": "AI Vibe Investment", // New
     "investment.iterationPathLink": "Iteration Path",
@@ -238,8 +238,8 @@ window.siteTranslations = {
     "investment_caselist.item4.desc": "Expand new deep communication channels for investors through AI-created themed podcasts.",
 
     "biomed.pageTitle": "AI Health Paradigm",
-    "biomed.mainTitle": "Connecting human potential and AI wisdom, leading to Physical and Mental Freedom",
-    "biomed.intro": "Explore the melody of health with AI-native intelligence, and to alleviate human suffering.",
+    "biomed.mainTitle": "Connecting human potential and AI, leading to Physical and Mental Freedom",
+    "biomed.intro": "Explore the melodies of body and mind and generate compound returns on health.",
     "biomed.appLinkPrefix": "Application Link: ", // New
     "biomed.appLinkSmartOriginBioMed": "SmartOrigin BioMed", // New
     "biomed.iterationPathLink": "Iteration Path",
